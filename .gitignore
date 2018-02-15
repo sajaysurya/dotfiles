@@ -1,0 +1,7 @@
+.task/backlog.data
+.task/duelist.txt
+.task/pending.data
+.task/tasklist.txt
+.task/undo.data
+.todo
+*.swp
