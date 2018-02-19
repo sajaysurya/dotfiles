@@ -25,5 +25,5 @@ conky.config = {
 }
 
 conky.text = [[
-	${head ~/.todo 30}
+	${head ~/Sync/.todo 30}
 ]]

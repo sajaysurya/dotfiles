@@ -21,6 +21,7 @@ Plugin 'christoomey/vim-tmux-navigator' "seamless navigation between tmux and vi
 Plugin 'flazz/vim-colorschemes'         "good collection of color schemes
 Plugin 'vim-airline/vim-airline'        "better looking status bar
 Plugin 'airblade/vim-gitgutter'         "shows per line changes in file
+Plugin 'lervag/vimtex'                  "minimal plugin for latex
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
