@@ -59,3 +59,25 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " get doc shortcut
 nnoremap <Leader>d :YcmCompleter GetDoc <CR>
+
+" to make vimtex play well with youcompleteme
+if !exists('g:ycm_semantic_triggers')
+    let g:ycm_semantic_triggers = {}
+endif
+    let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
+
+" Changing cursor shape per mode (for tmux)
+" 1 or 0 -> blinking block
+" 2 -> solid block
+" 3 -> blinking underscore
+" 4 -> solid underscore
+if exists('$TMUX')
+    " tmux will only forward escape sequences to the terminal if surrounded by a DCS sequence
+    let &t_SI .= "\<Esc>Ptmux;\<Esc>\<Esc>[5 q\<Esc>\\"
+    let &t_EI .= "\<Esc>Ptmux;\<Esc>\<Esc>[1 q\<Esc>\\"
+    autocmd VimLeave * silent !echo -ne "\033Ptmux;\033\033[0 q\033\\"
+else
+    let &t_SI .= "\<Esc>[5 q"
+    let &t_EI .= "\<Esc>[1 q"
+    autocmd VimLeave * silent !echo -ne "\033[0 q"
+endif
