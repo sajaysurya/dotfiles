@@ -1,0 +1,1 @@
+--output "~/Videos/%(title)s.%(ext)s"
