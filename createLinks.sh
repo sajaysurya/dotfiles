@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# remove unwanted files first
+rm -f ~/.bashrc
+
+# add symlinks
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.bashrc ~/.bashrc
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
