@@ -225,7 +225,7 @@ function conky_main()
 		cairo_show_text (cr,"lan  : "..ip)
 		cairo_move_to (cr,h_pos-1250,v_pos+110)
 		cairo_show_text (cr,task)
-		cairo_move_to (cr,h_pos+375,v_pos+110)
+		cairo_move_to (cr,h_pos+350,v_pos+110)
 		cairo_show_text (cr,conky_parse("${uptime}"))
 		-- cairo_show_text (cr,conky_parse("${execpi 3600 wget -q -O - \"https://finance.google.com/finance/converter?a=1&from=GBP&to=INR\" | grep \"<div id=currency_converter_result>\" | sed 's/<[^>]*>//g' | sed 's/=/is/g'}"))
 
