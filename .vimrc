@@ -41,6 +41,8 @@ filetype plugin indent on    " required
 " line numbering
 set nu
 
+set encoding=utf-8
+
 " not to flod python docstring and import
 let g:SimpylFold_fold_docstring	= 0
 let g:SimpylFold_fold_import	= 0
