@@ -2,4 +2,4 @@
 Description=Set TrackPoint attributes
 
 [Service]
-ExecStart=/usr/local/bin/trackpoint_configuration.sh
+ExecStart=/home/sajay/dotfiles/trackpoint_configuration.sh
