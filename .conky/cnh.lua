@@ -26,7 +26,8 @@ function conky_main()
 
 -- cairo drawing code starts
         -- display settings 
-		r,g,b=0.75,0.75,0.75 -- white
+		-- r,g,b=0.75,0.75,0.75 -- gray
+		r,g,b=1,1,1 -- gray
 		opaque=1 -- alpha opaque
 		transparent=0.25 -- alpha transparent
 		thin=10

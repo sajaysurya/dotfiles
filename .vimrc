@@ -15,8 +15,8 @@ Plugin 'tpope/vim-fugitive'             "git management
 Plugin 'tpope/vim-sensible'             "sensible settings
 Plugin 'tpope/vim-surround'             "for surrounds - brackets, tags..
 Plugin 'tmhedberg/SimpylFold'           "code folding - functions, classes
-Plugin 'scrooloose/nerdtree'            "file explorer
-Plugin 'Xuyuanp/nerdtree-git-plugin'    "git status in nerdtree
+"Plugin 'scrooloose/nerdtree'            "file explorer
+"Plugin 'Xuyuanp/nerdtree-git-plugin'    "git status in nerdtree
 Plugin 'christoomey/vim-tmux-navigator' "seamless navigation between tmux and vim
 Plugin 'flazz/vim-colorschemes'         "good collection of color schemes
 Plugin 'vim-airline/vim-airline'        "better looking status bar

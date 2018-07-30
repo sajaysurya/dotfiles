@@ -4,7 +4,7 @@ conky.config = {
     alignment = 'top_left',
     background = true,
     cpu_avg_samples = 2,
-	default_color = 'grey',
+	default_color = 'white',
     font = 'Calvin and Hobbes:size=20',
     draw_shades = false,
 	gap_x = 100,
