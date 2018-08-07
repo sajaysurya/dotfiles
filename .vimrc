@@ -22,6 +22,7 @@ Plugin 'flazz/vim-colorschemes'         "good collection of color schemes
 Plugin 'vim-airline/vim-airline'        "better looking status bar
 Plugin 'airblade/vim-gitgutter'         "shows per line changes in file
 Plugin 'lervag/vimtex'                  "minimal plugin for latex
+Plugin 'rhysd/vim-grammarous'           "for checking grammar
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -41,11 +42,19 @@ filetype plugin indent on    " required
 " line numbering
 set nu
 
+" set encoding
 set encoding=utf-8
+
+" set spell-check
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.tex setlocal spell
 
 " not to flod python docstring and import
 let g:SimpylFold_fold_docstring	= 0
 let g:SimpylFold_fold_import	= 0
+
+" LanguageTool executable for grammarous
+let g:grammarous#languagetool_cmd = 'languagetool'
 
 " to use system clipboard
 set clipboard=unnamedplus
@@ -61,6 +70,8 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " get doc shortcut
 nnoremap <Leader>d :YcmCompleter GetDoc <CR>
+" force YCM to run Jedi using python 3
+let g:ycm_python_binary_path = 'python'
 
 " to make vimtex play well with youcompleteme
 if !exists('g:ycm_semantic_triggers')

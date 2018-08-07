@@ -73,6 +73,9 @@ function conky_main()
 		bat0p=conky_parse("${battery_percent BAT0}")
 		bat1p=conky_parse("${battery_percent BAT1}")
                 task="Bored? Suggestion: "..conky_parse("${execi 900 shuf -n 1 Sync/.dolist}")
+                
+                -- extra display
+                protemp = conky_parse("${hwmon 0 temp 1}")
 
 		-- metre setup
 		cairo_set_line_cap  (cr, CAIRO_LINE_CAP_ROUND);
@@ -230,6 +233,8 @@ function conky_main()
 		cairo_show_text (cr,conky_parse("${uptime}"))
 		-- cairo_show_text (cr,conky_parse("${execpi 3600 wget -q -O - \"https://finance.google.com/finance/converter?a=1&from=GBP&to=INR\" | grep \"<div id=currency_converter_result>\" | sed 's/<[^>]*>//g' | sed 's/=/is/g'}"))
 
+		cairo_move_to (cr,h_pos-32,v_pos1+15)
+		cairo_show_text (cr,protemp.."'C")
 -- cairo drawing code ends
     end
     cairo_destroy(cr)
