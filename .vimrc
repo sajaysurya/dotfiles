@@ -20,6 +20,7 @@ Plugin 'tmhedberg/SimpylFold'           "code folding - functions, classes
 Plugin 'christoomey/vim-tmux-navigator' "seamless navigation between tmux and vim
 Plugin 'flazz/vim-colorschemes'         "good collection of color schemes
 Plugin 'vim-airline/vim-airline'        "better looking status bar
+Plugin 'vim-airline/vim-airline-themes' "themes for status bar
 Plugin 'airblade/vim-gitgutter'         "shows per line changes in file
 Plugin 'lervag/vimtex'                  "minimal plugin for latex
 Plugin 'rhysd/vim-grammarous'           "for checking grammar
@@ -64,6 +65,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 " set color scheme
 colorscheme github
+let g:airline_theme='light'
 
 " tab settings
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
