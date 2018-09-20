@@ -77,10 +77,10 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 ""
-set $ws2 ""
+set $ws2 ""
 set $ws3 "doc"
 set $ws4 ""
-set $ws5 ""
+set $ws5 ""
 set $ws6 "6"
 set $ws7 ""
 set $ws8 ""
@@ -116,7 +116,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec exit #"i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -147,10 +147,11 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar
 
-set $white       #000000
+set $white       #fbfffc
 set $black       #111111
 set $transparent #00000000
 set $grassgreen  #8c9440
+set $skyblue     #5f819d
 
 bar {
 #    verbose yes
@@ -163,15 +164,17 @@ bar {
             separator          $transparent
 
             #                  BORDER       BACKGROUND   TEXT
-            focused_workspace  $transparent $grassgreen  $black
+            focused_workspace  $transparent $skyblue     $white
+            inactive_workspace $transparent $transparent $white
         }
 }
 # startup applications
 exec --no-startup-id numlockx
 exec --no-startup-id compton
-exec --no-startup-id feh --randomize --bg-scale ~/Pictures/Wallpapers/*
+exec --no-startup-id feh --randomize --bg-scale ~/Pictures/Wallpapers/Arch.jpg
 exec --no-startup-id nm-applet
 exec --no-startup-id dropbox
+exec --no-startup-id termite -e "vim ~/Sync" --class Ftermite
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -q sset Master,0 1+ unmute"
@@ -183,8 +186,11 @@ bindsym XF86AudioMicMute exec --no-startup-id "amixer set Capture toggle"
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # decrease screen brightness
 
-# admin
+# mics
 bindsym XF86Tools exec --no-startup-id i3lock -u -i ~/Pictures/Wallpapers/breeze.png
+for_window [class="Ftermite"] floating enable
+bindsym XF86Calculator exec --no-startup-id termite -e ~/dotfiles/bin/python.init.sh --class Ftermite
+bindsym $mod+o exec --no-startup-id termite -e "vim ~/Sync" --class Ftermite
 
 # gaps
 for_window [class="^.*"] border pixel 0

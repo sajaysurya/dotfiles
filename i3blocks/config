@@ -22,3 +22,8 @@ markup=pango
 command=echo "`date +'%a %d %b'` <b>`date +'%T'`</b> "; [[ -z "${BLOCK_BUTTON}" ]] || gsimplecal &
 interval=1
 markup=pango
+
+[task]
+command=echo ""; [[ -z "${BLOCK_BUTTON}" ]] || termite -e "vim ~/Sync" --class Ftermite
+interval=1
+markup=pango

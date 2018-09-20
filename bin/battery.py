@@ -18,10 +18,10 @@ def color(percent):
 FA_LIGHTNING = "<span color='yellow'><span font='FontAwesome'>\uf0e7</span></span>"
 
 # stands for plugged in
-FA_PLUG = "<span font='FontAwesome'>\uf1e6</span>"
+FA_FULLBATTERY = "<span font='FontAwesome'>\uf240</span>"
 
 # stands for using battery
-FA_BATTERY = "<span font='FontAwesome'>\uf240</span>"
+FA_BATTERY = "<span font='FontAwesome'>\uf242</span>"
 
 # stands for unknown status of battery
 FA_QUESTION = "<span font='FontAwesome'>\uf128</span>"
@@ -50,7 +50,7 @@ def main():
                 if state == "Discharging":
                     text += FA_BATTERY + " "
                 elif state == "Full":
-                    text += FA_PLUG + " "
+                    text += FA_FULLBATTERY + " "
                 elif state == "Unknown":
                     text += FA_BATTERY + " "
                 elif state == "Charging":
