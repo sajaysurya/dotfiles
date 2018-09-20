@@ -8,9 +8,10 @@ compton
 feh
 nm-applet
 gsimplecal
-ttf-hack
+numlockx
+ubuntu mono derivative powerline
+ttf-liberation
 ttf-font-awesome
-ttf-dejavu
 
 
 AUR

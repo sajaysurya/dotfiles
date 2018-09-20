@@ -7,7 +7,7 @@ set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:UbuntuMono 11
+font pango:Ubuntu Mono derivate Powerline 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -76,14 +76,14 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
+set $ws1 ""
+set $ws2 ""
+set $ws3 "doc"
+set $ws4 ""
+set $ws5 ""
 set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
+set $ws7 ""
+set $ws8 ""
 set $ws9 "9"
 set $ws10 "10"
 
@@ -146,13 +146,28 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar
+
+set $white       #000000
+set $black       #111111
+set $transparent #00000000
+set $grassgreen  #8c9440
+
 bar {
 #    verbose yes
     status_command i3blocks
     i3bar_command i3bar -t
     position top
+    colors {
+            statusline         $black
+            background         $transparent
+            separator          $transparent
+
+            #                  BORDER       BACKGROUND   TEXT
+            focused_workspace  $transparent $grassgreen  $black
+        }
 }
 # startup applications
+exec --no-startup-id numlockx
 exec --no-startup-id compton
 exec --no-startup-id feh --randomize --bg-scale ~/Pictures/Wallpapers/*
 exec --no-startup-id nm-applet
@@ -168,7 +183,10 @@ bindsym XF86AudioMicMute exec --no-startup-id "amixer set Capture toggle"
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # decrease screen brightness
 
+# admin
+bindsym XF86Tools exec --no-startup-id i3lock -u -i ~/Pictures/Wallpapers/breeze.png
+
 # gaps
 for_window [class="^.*"] border pixel 0
-gaps inner 8
+gaps inner 11
 gaps outer 0
