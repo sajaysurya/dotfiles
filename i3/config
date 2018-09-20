@@ -158,7 +158,7 @@ bar {
     i3bar_command i3bar -t
     position top
     colors {
-            statusline         $black
+            #statusline         $white
             background         $transparent
             separator          $transparent
 

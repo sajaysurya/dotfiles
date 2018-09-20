@@ -1,6 +1,21 @@
+[updates]
+command=python ~/dotfiles/bin/updates.py
+interval=300
+markup=pango
+
+[cpu]
+command=python ~/dotfiles/bin/cpu.py
+interval=1
+markup=pango
+
+[memory]
+command=python ~/dotfiles/bin/mem.py
+interval=1
+markup=pango
+
 [battery]
 command=python ~/dotfiles/bin/battery.py
-interval=1
+interval=30
 markup=pango
 
 [time]
