@@ -175,6 +175,7 @@ exec --no-startup-id feh --randomize --bg-scale ~/Pictures/Wallpapers/Arch.jpg
 exec --no-startup-id nm-applet
 exec --no-startup-id dropbox
 exec --no-startup-id termite -e "vim ~/Sync" --class Ftermite
+exec --no-startup-id xinput set-prop 11 288 1
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -c 0 set Master 5+ unmute"
