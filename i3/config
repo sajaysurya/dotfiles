@@ -78,14 +78,14 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 ""
 set $ws2 ""
-set $ws3 "doc"
-set $ws4 ""
+set $ws3 ""
+set $ws4 ""
 set $ws5 ""
 set $ws6 "6"
 set $ws7 ""
 set $ws8 ""
 set $ws9 "9"
-set $ws10 "10"
+set $ws10 ""
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1

@@ -37,6 +37,7 @@ def main():
     fulltext = ""
     output = check_output(['acpi'], universal_newlines=True)
     percents = []
+    states = []
 
     if not output:
         # stands for no battery found
@@ -52,6 +53,7 @@ def main():
                 percent = battery.split(", ")[1].split("%")[0]
                 state = battery.split(": ")[1].split(", ")[0]
                 percents.append(int(percent))
+                states.append(state)
 
                 if state == "Discharging":
                     text += FA_BATTERY + " "
@@ -73,7 +75,7 @@ def main():
                 fulltext += text
 
     print(fulltext)
-    if np.mean(percents) < 30:
+    if (np.mean(percents) < 10) and ("Charging" not in states):
         Notify.init("Low Battery:")
         msg = Notify.Notification.new("Low Battery:",
                                       "Charge laptop immediately",
