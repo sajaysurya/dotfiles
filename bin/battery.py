@@ -1,7 +1,11 @@
 '''
 battery indicator for i3blocks
 '''
+import numpy as np
 from subprocess import check_output
+import gi
+gi.require_version('Notify', '0.7')
+from gi.repository import Notify
 
 def color(percent):
     '''
@@ -9,7 +13,7 @@ def color(percent):
     '''
     percent = int(percent)
     if percent < 20:
-        return "#FB0202"
+        return "#FF0000"
     if percent < 50:
         return "#FFCC00"
     return "#FFFFFF"
@@ -32,6 +36,7 @@ def main():
     '''
     fulltext = ""
     output = check_output(['acpi'], universal_newlines=True)
+    percents = []
 
     if not output:
         # stands for no battery found
@@ -46,6 +51,7 @@ def main():
                 text = "  "
                 percent = battery.split(", ")[1].split("%")[0]
                 state = battery.split(": ")[1].split(", ")[0]
+                percents.append(int(percent))
 
                 if state == "Discharging":
                     text += FA_BATTERY + " "
@@ -58,12 +64,23 @@ def main():
                 else:
                     text += FA_QUESTION
 
-                form = '<span color="{}">{}%</span>'
+                if int(percent) < 10:
+                    form = '<span font-weight="bold"><span color="{}">{}%</span></span>'
+                else:
+                    form = '<span color="{}">{}%</span>'
                 text += form.format(color(percent), percent)
 
                 fulltext += text
 
     print(fulltext)
+    if np.mean(percents) < 30:
+        Notify.init("Low Battery:")
+        msg = Notify.Notification.new("Low Battery:",
+                                      "Charge laptop immediately",
+                                      "dialog-information")
+        msg.set_urgency(2)  # critical urgency
+        msg.show()
+
 
 if __name__ == "__main__":
     main()
