@@ -177,8 +177,8 @@ exec --no-startup-id dropbox
 exec --no-startup-id termite -e "vim ~/Sync" --class Ftermite
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -q sset Master,0 1+ unmute"
-bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -q sset Master,0 1- unmute"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -c 0 set Master 5+ unmute"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -c 0 set Master 5- unmute"
 bindsym XF86AudioMute exec --no-startup-id "amixer -q sset Master,0 toggle"
 bindsym XF86AudioMicMute exec --no-startup-id "amixer set Capture toggle"
 
