@@ -66,7 +66,7 @@ def main():
                 else:
                     text += FA_QUESTION
 
-                if int(percent) < 10:
+                if int(percent) < 20:
                     form = '<span font-weight="bold"><span color="{}">{}%</span></span>'
                 else:
                     form = '<span color="{}">{}%</span>'

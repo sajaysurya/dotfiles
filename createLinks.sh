@@ -16,3 +16,5 @@ ln -s ~/dotfiles/i3blocks ~/.config/i3blocks
 ln -s ~/dotfiles/termite ~/.config/termite
 ln -s ~/dotfiles/dunst ~/.config/dunst
 ln -s ~/dotfiles/ranger ~/.config/ranger
+ln -s ~/dotfiles/applications ~/.local/share/applications
+ln -s ~/dotfiles/.tridactylrc ~/.tridactylrc

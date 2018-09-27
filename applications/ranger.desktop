@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=ranger
+Comment=Launches the ranger file manager
+Icon=utilities-terminal
+Terminal=true
+Exec=termite -e ranger %f
+Categories=ConsoleOnly;System;FileTools;FileManager
+MimeType=inode/directory;

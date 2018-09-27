@@ -1,0 +1,36 @@
+" Place this at $XDG_CONFIG_DIR/tridactyl/tridactylrc (that's
+" ~/.config/tridactyl/tridactylrc to mere mortals) or ~/.tridactylrc and
+" install the native messenger (:installnative in Tridactyl). Run :source to
+" get it in the browser, or just restart.
+
+" NB: If you want "vim-like" behaviour where removing a line from 
+" here makes the setting disappear, uncomment the line below.
+
+"sanitise tridactyllocal tridactylsync
+
+"
+" Binds
+"
+bind J tabprev
+bind K tabnext
+
+"
+" GUI changes
+"
+guiset_quiet gui none
+"guiset_quiet hoverlink right
+
+"
+" Misc settings
+"
+set searchengine google
+set allowautofocus false
+set theme dark
+
+"
+" Blacklists
+"
+blacklistadd 127.0.0.1
+
+" This will have to do until someone writes us a nice syntax file :)
+" vim: set filetype=vim:
