@@ -18,3 +18,6 @@ ln -s ~/dotfiles/dunst ~/.config/dunst
 ln -s ~/dotfiles/ranger ~/.config/ranger
 ln -s ~/dotfiles/applications ~/.local/share/applications
 ln -s ~/dotfiles/.tridactylrc ~/.tridactylrc
+
+# for askpass
+ln -sv /usr/lib/ssh/x11-ssh-askpass ~/dotfiles/bin/ssh-askpass

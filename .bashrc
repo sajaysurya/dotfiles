@@ -7,5 +7,5 @@ alias rm="rm -i"
 
 # to start x at login
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec startx
+  exec ssh-agent startx
 fi

@@ -14,3 +14,8 @@ Xft*lcdfilter:  lcddefault
 !  Walllpaper/cursor
 !----------------
 Xcursor.theme: Breeze
+
+!----------------
+!  Ask Pass theme
+!----------------
+ssh-askpass*background: #000000
