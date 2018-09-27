@@ -17,7 +17,6 @@ libnotify
 python-gobject
 python-numpy
 keychain
-x11-ssh-keypass
 
 
 AUR
