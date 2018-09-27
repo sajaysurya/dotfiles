@@ -5,6 +5,9 @@ alias rm="rm -i"
 
 . /home/sajay/miniconda3/etc/profile.d/conda.sh
 
+# get rsa password after login, before starting x
+eval $(keychain --eval --quiet id_rsa)
+
 # to start x at login
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx
