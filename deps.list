@@ -17,6 +17,7 @@ libnotify
 python-gobject
 python-numpy
 keychain
+python-requests
 
 
 AUR

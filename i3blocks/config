@@ -3,6 +3,11 @@ command=python ~/dotfiles/bin/updates.py
 interval=300
 markup=pango
 
+[currency]
+command=python ~/dotfiles/bin/currency.py
+interval=108000
+markup=pango
+
 [cpu]
 command=python ~/dotfiles/bin/cpu.py
 interval=1

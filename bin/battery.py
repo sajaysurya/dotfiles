@@ -49,7 +49,7 @@ def main():
         # extract percentage left
         for battery in batteries:
             if battery != '':
-                text = "  "
+                text = " "
                 percent = battery.split(", ")[1].split("%")[0]
                 state = battery.split(": ")[1].split(", ")[0]
                 percents.append(int(percent))
@@ -64,7 +64,7 @@ def main():
                 elif state == "Charging":
                     text += FA_LIGHTNING + " "
                 else:
-                    text += FA_QUESTION
+                    text += FA_QUESTION + " "
 
                 if int(percent) < 20:
                     form = '<span font-weight="bold"><span color="{}">{}%</span></span>'
