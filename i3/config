@@ -171,7 +171,7 @@ bar {
 # startup applications
 exec --no-startup-id numlockx
 exec --no-startup-id compton
-exec --no-startup-id feh --randomize --bg-scale ~/Pictures/Wallpapers/Arch.jpg
+exec --no-startup-id feh --randomize --bg-scale ~/Pictures/Wallpapers/*
 exec --no-startup-id nm-applet
 exec --no-startup-id dropbox
 exec --no-startup-id termite -e "vim ~/Sync" --class Ftermite
@@ -188,7 +188,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # increase screen br
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # decrease screen brightness
 
 # mics
-bindsym XF86Tools exec --no-startup-id i3lock -u -i ~/Pictures/Wallpapers/breeze.png
+bindsym XF86Tools exec --no-startup-id i3lock -u -i ~/Pictures/Wallpapers/Arch.jpg
 for_window [class="Ftermite"] floating enable
 bindsym XF86Calculator exec --no-startup-id termite -e ~/dotfiles/bin/python.init.sh --class Ftermite
 bindsym $mod+o exec --no-startup-id termite -e "vim ~/Sync" --class Ftermite
