@@ -18,7 +18,6 @@ bind K tabnext
 " GUI changes
 "
 guiset_quiet gui none
-"guiset_quiet hoverlink right
 
 "
 " Misc settings
