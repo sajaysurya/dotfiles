@@ -9,19 +9,17 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'           "Package Manager
-Plugin 'valloric/youcompleteme'         "auto complete
+"Install YCM using AUR
+"Plugin 'valloric/youcompleteme'         "auto complete
 Plugin 'w0rp/ale'                       "Async Linting Engine
 Plugin 'tpope/vim-fugitive'             "git management
 Plugin 'tpope/vim-sensible'             "sensible settings
 Plugin 'tpope/vim-surround'             "for surrounds - brackets, tags..
 Plugin 'tmhedberg/SimpylFold'           "code folding - functions, classes
-"Plugin 'scrooloose/nerdtree'            "file explorer
-"Plugin 'Xuyuanp/nerdtree-git-plugin'    "git status in nerdtree
 Plugin 'christoomey/vim-tmux-navigator' "seamless navigation between tmux and vim
 Plugin 'flazz/vim-colorschemes'         "good collection of color schemes
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-"Plugin 'vim-airline/vim-airline'        "better looking status bar
-"Plugin 'vim-airline/vim-airline-themes' "themes for status bar
+"Install Powerline using arch packages (powerline, powerline-vim)
+"Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'airblade/vim-gitgutter'         "shows per line changes in file
 Plugin 'lervag/vimtex'                  "minimal plugin for latex
 Plugin 'rhysd/vim-grammarous'           "for checking grammar
@@ -64,6 +62,10 @@ set clipboard=unnamedplus
 " NERDtree shortcut
 map <C-n> :NERDTreeToggle<CR>
 
+" powerline settings
+let g:powerline_pycmd="py3"
+set laststatus=2
+
 " set color scheme
 colorscheme github
 let g:airline_theme='light'
@@ -75,7 +77,8 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 nnoremap <Leader>d :YcmCompleter GetDoc <CR>
 " force YCM to run Jedi using python 3
 let g:ycm_python_binary_path = 'python'
-
+" AUR uses python 2 for building, so tell that
+let g:ycm_server_python_interpreter = 'python2'
 " to make vimtex play well with youcompleteme
 if !exists('g:ycm_semantic_triggers')
     let g:ycm_semantic_triggers = {}

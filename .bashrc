@@ -1,8 +1,14 @@
-export PS1="\[$(tput bold)\]\[$(tput setaf 4)\]$ > \[$(tput sgr0)\]"
-export PS2="\[$(tput bold)\]\[$(tput setaf 4)\]>> \[$(tput sgr0)\]"
+# configure powerline
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /usr/share/powerline/bindings/bash/powerline.sh
+
+# aliases for ease
 alias ls="ls --color -lah"
 alias rm="rm -i"
 
+# conda configuration
 . /home/sajay/miniconda3/etc/profile.d/conda.sh
 
 # get rsa password after login, before starting x
