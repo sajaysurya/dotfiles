@@ -173,6 +173,7 @@ exec --no-startup-id numlockx
 exec --no-startup-id compton
 exec --no-startup-id feh --randomize --bg-scale ~/Pictures/Wallpapers/*
 exec --no-startup-id nm-applet
+exec --no-startup-id udiskie --tray
 exec --no-startup-id dropbox
 exec --no-startup-id termite -e "vim ~/Sync" --class Ftermite
 exec --no-startup-id xinput set-prop 11 288 1

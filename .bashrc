@@ -14,7 +14,8 @@ alias rm="rm -i"
 # get rsa password after login, before starting x
 eval $(keychain --eval --quiet id_rsa)
 
-# to start x at login
+# to start x at login (only if no other display is running)
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec startx
+    # start the window manager
+    exec startx
 fi

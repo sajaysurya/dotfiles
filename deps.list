@@ -22,6 +22,7 @@ keychain
 python-requests
 powerline
 powerline-vim
+w3m
 
 
 AUR
