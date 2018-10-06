@@ -9,8 +9,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'           "Package Manager
-"Install YCM using AUR
-"Plugin 'valloric/youcompleteme'         "auto complete
+Plugin 'valloric/youcompleteme'         "auto complete
 Plugin 'w0rp/ale'                       "Async Linting Engine
 Plugin 'tpope/vim-fugitive'             "git management
 Plugin 'tpope/vim-sensible'             "sensible settings
@@ -75,10 +74,10 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " get doc shortcut
 nnoremap <Leader>d :YcmCompleter GetDoc <CR>
+
 " force YCM to run Jedi using python 3
 let g:ycm_python_binary_path = 'python'
-" AUR uses python 2 for building, so tell that
-let g:ycm_server_python_interpreter = 'python2'
+
 " to make vimtex play well with youcompleteme
 if !exists('g:ycm_semantic_triggers')
     let g:ycm_semantic_triggers = {}
