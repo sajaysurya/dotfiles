@@ -23,11 +23,12 @@ python-requests
 powerline
 powerline-vim
 w3m
+xcursor-breeze (aur)
 
 
-AUR
+useful extras
 ---
-cower 18-1
-dropbox 53.4.67-1
-franz-bin 5.0.0_beta.18-1
-tor-browser-en 7.5.6-1
+cower 18-1 (AUR)
+dropbox 53.4.67-1 (AUR)
+franz-bin 5.0.0_beta.18-1 (AUR)
+tor-browser-en 7.5.6-1 (AUR)
