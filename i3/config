@@ -152,6 +152,7 @@ set $black       #111111
 set $transparent #00000000
 set $grassgreen  #8c9440
 set $skyblue     #5f819d
+set $mildgray    #4d525b
 
 bar {
 #    verbose yes
@@ -164,14 +165,14 @@ bar {
             separator          $transparent
 
             #                  BORDER       BACKGROUND   TEXT
-            focused_workspace  $transparent $skyblue     $white
+            focused_workspace  $transparent $mildgray     $white
             inactive_workspace $transparent $transparent $white
         }
 }
 # startup applications
 exec --no-startup-id numlockx
 exec --no-startup-id compton
-exec --no-startup-id feh --randomize --bg-scale ~/Pictures/Wallpapers/*
+exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 exec --no-startup-id nm-applet
 exec --no-startup-id udiskie --tray
 exec --no-startup-id dropbox
@@ -189,7 +190,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # increase screen br
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # decrease screen brightness
 
 # mics
-bindsym XF86Tools exec --no-startup-id i3lock -u -i ~/Pictures/Wallpapers/Arch.jpg
+bindsym XF86Tools exec --no-startup-id i3lock -u
 for_window [class="Ftermite"] floating enable
 bindsym XF86Calculator exec --no-startup-id termite -e ~/dotfiles/bin/python.init.sh --class Ftermite
 bindsym $mod+o exec --no-startup-id termite -e "vim ~/Sync" --class Ftermite
