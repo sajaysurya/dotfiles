@@ -194,6 +194,7 @@ bindsym XF86Tools exec --no-startup-id i3lock -u
 for_window [class="Ftermite"] floating enable
 bindsym XF86Calculator exec --no-startup-id termite -e ~/dotfiles/bin/python.init.sh --class Ftermite
 bindsym $mod+o exec --no-startup-id termite -e "vim ~/Sync" --class Ftermite
+bindsym $mod+t exec --no-startup-id termite --class Ftermite
 
 # gaps
 for_window [class="^.*"] border pixel 0
