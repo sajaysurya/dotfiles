@@ -1,6 +1,7 @@
 compulsory
 ----------
 DM
+scrot
 termite
 light - aur for backlight control
 i3-gaps from arch repo (default) - with optional deps
