@@ -17,8 +17,7 @@ Plugin 'tpope/vim-surround'             "for surrounds - brackets, tags..
 Plugin 'tmhedberg/SimpylFold'           "code folding - functions, classes
 Plugin 'christoomey/vim-tmux-navigator' "seamless navigation between tmux and vim
 Plugin 'flazz/vim-colorschemes'         "good collection of color schemes
-"Install Powerline using arch packages (powerline, powerline-vim)
-"Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'airblade/vim-gitgutter'         "shows per line changes in file
 Plugin 'lervag/vimtex'                  "minimal plugin for latex
 Plugin 'rhysd/vim-grammarous'           "for checking grammar
@@ -61,13 +60,8 @@ set clipboard=unnamedplus
 " NERDtree shortcut
 map <C-n> :NERDTreeToggle<CR>
 
-" powerline settings
-let g:powerline_pycmd="py3"
-set laststatus=2
-
 " set color scheme
 colorscheme github
-let g:airline_theme='light'
 
 " tab settings
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
