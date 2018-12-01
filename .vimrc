@@ -9,10 +9,10 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'           "Package Manager
+Plugin 'tpope/vim-sensible'             "sensible settings
 Plugin 'valloric/youcompleteme'         "auto complete
 Plugin 'w0rp/ale'                       "Async Linting Engine
 Plugin 'tpope/vim-fugitive'             "git management
-Plugin 'tpope/vim-sensible'             "sensible settings
 Plugin 'tpope/vim-surround'             "for surrounds - brackets, tags..
 Plugin 'tmhedberg/SimpylFold'           "code folding - functions, classes
 Plugin 'christoomey/vim-tmux-navigator' "seamless navigation between tmux and vim
@@ -57,9 +57,6 @@ let g:grammarous#languagetool_cmd = 'languagetool'
 " to use system clipboard
 set clipboard=unnamedplus
 
-" NERDtree shortcut
-map <C-n> :NERDTreeToggle<CR>
-
 " set color scheme
 colorscheme github
 
@@ -69,7 +66,7 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 " get doc shortcut
 nnoremap <Leader>d :YcmCompleter GetDoc <CR>
 
-" force YCM to run Jedi using python 3
+" force YCM to run Jedi using python in the default environment
 let g:ycm_python_binary_path = 'python'
 
 " to make vimtex play well with youcompleteme
