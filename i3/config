@@ -2,18 +2,18 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-# using alt as the mod key
+# using win as the mod key
 set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Ubuntu Mono derivate Powerline 10
+font pango:UbuntuMono, FontAwesome 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -69,10 +69,10 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+u focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+y focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -84,7 +84,7 @@ set $ws5 ""
 set $ws6 ""
 set $ws7 ""
 set $ws8 ""
-set $ws9 ""
+set $ws9 ""
 set $ws10 ""
 
 # switch to workspace
@@ -147,37 +147,15 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar
 
-set $white       #fbfffc
-set $black       #111111
-set $transparent #00000000
-set $grassgreen  #8c9440
-set $skyblue     #5f819d
-set $mildgray    #4d525b
-
 bar {
-#    verbose yes
     status_command i3blocks
-    i3bar_command i3bar -t
     position top
-    colors {
-            #statusline         $white
-            background         $transparent
-            separator          $transparent
-
-            #                  BORDER       BACKGROUND   TEXT
-            focused_workspace  $transparent $mildgray     $white
-            inactive_workspace $transparent $transparent $white
-        }
 }
 # startup applications
 exec --no-startup-id numlockx
-exec --no-startup-id compton
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 exec --no-startup-id nm-applet
 exec --no-startup-id udiskie --tray
-exec --no-startup-id dropbox
-exec --no-startup-id termite -e "vim ~/Sync" --class Ftermite
-exec --no-startup-id xinput set-prop 11 294 1  # natural scrolling
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -193,11 +171,9 @@ bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # decrease screen 
 bindsym XF86Tools exec --no-startup-id i3lock -u
 for_window [class="Ftermite"] floating enable
 bindsym XF86Calculator exec --no-startup-id termite -e ~/dotfiles/bin/python.init.sh --class Ftermite
-bindsym $mod+o exec --no-startup-id termite -e "vim ~/Sync" --class Ftermite
-bindsym $mod+t exec --no-startup-id termite --class Ftermite
+bindsym $mod+comma exec --no-startup-id gnome-terminal -e "vim ~/Sync" --class Ftermite
+bindsym $mod+period exec --no-startup-id gnome-terminal --class Ftermite
 bindsym --release Print exec --no-startup-id scrot -s ~/Pictures/screenshots/%s_%H%M_%d%m%Y_$wx$h.png
 
 # gaps
-for_window [class="^.*"] border pixel 0
-gaps inner 11
-gaps outer 0
+for_window [class="^.*"] border pixel 5

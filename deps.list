@@ -1,21 +1,14 @@
 compulsory
 ----------
-DM
 scrot
-termite
-light - aur for backlight control
-i3-gaps from arch repo (default) - with optional deps
-ranger - with optional dependencies for previews
-zathura - with optional dependencies
-compton
+ranger
+zathura
 feh
 dunst
 nm-applet
 gsimplecal
 numlockx
-ubuntu mono derivative powerline
-ttf-liberation
-ttf-font-awesome
+fonts-font-awesome
 libnotify
 python-gobject
 python-numpy
@@ -23,12 +16,4 @@ keychain
 python-requests
 powerline
 w3m
-xcursor-breeze (aur)
-
-
-useful extras
----
-cower 18-1 (AUR)
-dropbox 53.4.67-1 (AUR)
-franz-bin 5.0.0_beta.18-1 (AUR)
-tor-browser-en 7.5.6-1 (AUR)
+breeze cursor theme

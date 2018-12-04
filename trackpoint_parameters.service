@@ -1,5 +1,0 @@
-[Unit]
-Description=Set TrackPoint attributes
-
-[Service]
-ExecStart=/home/sajay/dotfiles/trackpoint_configuration.sh

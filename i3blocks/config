@@ -1,34 +1,27 @@
-[updates]
-command=python ~/dotfiles/bin/updates.py
-interval=300
-markup=pango
+separator=false
+separator_block_width=15
 
 [currency]
-command=python ~/dotfiles/bin/currency.py
-interval=108000
+command=python3 ~/dotfiles/bin/currency.py
+interval=216000
 markup=pango
 
 [cpu]
-command=python ~/dotfiles/bin/cpu.py
+command=python3 ~/dotfiles/bin/cpu.py
 interval=1
 markup=pango
 
 [memory]
-command=python ~/dotfiles/bin/mem.py
+command=python3 ~/dotfiles/bin/mem.py
 interval=1
 markup=pango
 
-[battery]
-command=python ~/dotfiles/bin/battery.py
-interval=30
-markup=pango
+#[battery]
+#command=python3 ~/dotfiles/bin/battery.py
+#interval=30
+#markup=pango
 
 [time]
-command=echo "`date +'%a %d %b'` <b>`date +'%T'`</b> "; [[ -z "${BLOCK_BUTTON}" ]] || gsimplecal &
-interval=1
-markup=pango
-
-[task]
-command=echo ""; [[ -z "${BLOCK_BUTTON}" ]] || termite -e "vim ~/Sync" --class Ftermite
+command=echo "`date +'%a %d %b'` <b>`date +'%T'`</b> "
 interval=1
 markup=pango

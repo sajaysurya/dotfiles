@@ -74,14 +74,14 @@ def main():
 
                 fulltext += text
 
+        if (np.mean(percents) < 10) and ("Charging" not in states):
+            Notify.init("Low Battery:")
+            msg = Notify.Notification.new("Low Battery:",
+                                          "Charge laptop immediately",
+                                          "dialog-information")
+            msg.set_urgency(2)  # critical urgency
+            msg.show()
     print(fulltext)
-    if (np.mean(percents) < 10) and ("Charging" not in states):
-        Notify.init("Low Battery:")
-        msg = Notify.Notification.new("Low Battery:",
-                                      "Charge laptop immediately",
-                                      "dialog-information")
-        msg.set_urgency(2)  # critical urgency
-        msg.show()
 
 
 if __name__ == "__main__":
