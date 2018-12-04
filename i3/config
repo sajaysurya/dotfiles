@@ -156,6 +156,7 @@ exec --no-startup-id numlockx
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 exec --no-startup-id nm-applet
 exec --no-startup-id udiskie --tray
+exec --no-startup-id xmodmap -e "pointer = 3 2 1"
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -178,5 +179,6 @@ bindsym --release Print exec --no-startup-id scrot -s ~/Pictures/screenshots/%s_
 # gaps
 for_window [class="^.*"] border pixel 5
 
+# color settings
 # class                 border  backgr. text    indicator child_border
 client.focused          #4c7899 #285577 #ffffff #def40d   #2e9ef4

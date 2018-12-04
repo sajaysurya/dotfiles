@@ -40,6 +40,9 @@ filetype plugin indent on    " required
 " line numbering
 set nu
 
+" no wrapping
+set nowrap
+
 " set encoding
 set encoding=utf-8
 
