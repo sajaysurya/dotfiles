@@ -177,3 +177,6 @@ bindsym --release Print exec --no-startup-id scrot -s ~/Pictures/screenshots/%s_
 
 # gaps
 for_window [class="^.*"] border pixel 5
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #4c7899 #285577 #ffffff #def40d   #2e9ef4
