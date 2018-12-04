@@ -17,3 +17,4 @@ ln -s ~/dotfiles/tridactyl ~/.config/tridactyl
 ln -s ~/dotfiles/applications ~/.local/share/applications
 ln -s ~/dotfiles/bin ~/bin
 ln -s ~/dotfiles/powerline ~/.config/powerline
+ln -s ~/dotfiles/gtk-3.0 ~/.config/gtk-3.0
