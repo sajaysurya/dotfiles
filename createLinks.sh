@@ -3,6 +3,7 @@
 # remove unwanted files first
 rm -f ~/.bashrc
 mkdir ~/.ssh
+rm -r ~/.config/gtk-3.0
 
 # add symlinks
 ln -s ~/dotfiles/.bashrc ~/.bashrc
@@ -10,7 +11,7 @@ ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.ssh/config ~/.ssh/config
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/youtube-dl ~/.config/youtube-dl
-ln -s ~/dotfiles/mpv.conf ~/.config/mpv/mpv.conf
+ln -s ~/dotfiles/mpv ~/.config/mpv
 ln -s ~/dotfiles/i3 ~/.config/i3
 ln -s ~/dotfiles/i3blocks ~/.config/i3blocks
 ln -s ~/dotfiles/dunst ~/.config/dunst

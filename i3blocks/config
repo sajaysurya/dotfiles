@@ -16,10 +16,10 @@ command=python3 ~/dotfiles/bin/mem.py
 interval=1
 markup=pango
 
-#[battery]
-#command=python3 ~/dotfiles/bin/battery.py
-#interval=30
-#markup=pango
+[battery]
+command=python3 ~/dotfiles/bin/battery.py
+interval=30
+markup=pango
 
 [time]
 command=echo "`date +'%a %d %b'` <b>`date +'%T'`</b> "
