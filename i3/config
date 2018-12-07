@@ -155,15 +155,15 @@ bar {
         statusline #eeeeee
         separator #666666
         #                  border  backgr. text
-        focused_workspace  #2e9ef4 #2e9ef4 #ffffff
-        active_workspace   #2e9ef4 #2e9ef4 #ffffff
-        inactive_workspace #333333 #222222 #888888
-        urgent_workspace   #2f343a #900000 #ffffff
+        focused_workspace  #222222 #2e9ef4 #ffffff
+        active_workspace   #222222 #2e9ef4 #ffffff
+        inactive_workspace #222222 #222222 #888888
+        urgent_workspace   #222222 #900000 #ffffff
    }
 }
 # startup applications
 exec --no-startup-id numlockx
-exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
+exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*.png
 exec --no-startup-id nm-applet
 exec --no-startup-id udiskie --tray
 exec --no-startup-id xmodmap -e "pointer = 3 2 1"
