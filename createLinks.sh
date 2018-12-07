@@ -2,10 +2,12 @@
 
 # remove unwanted files first
 rm -f ~/.bashrc
+mkdir ~/.ssh
 
 # add symlinks
 ln -s ~/dotfiles/.bashrc ~/.bashrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.ssh/config ~/.ssh/config
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/youtube-dl ~/.config/youtube-dl
 ln -s ~/dotfiles/mpv.conf ~/.config/mpv/mpv.conf
