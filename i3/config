@@ -174,13 +174,13 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 bindsym XF86AudioMicMute exec --no-startup-id "amixer set Capture toggle"
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5% # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- # decrease screen brightness
 
 # mics
 bindsym XF86Tools exec --no-startup-id i3lock -u
 for_window [class="Ftermite"] floating enable
-bindsym XF86Calculator exec --no-startup-id termite -e ~/dotfiles/bin/python.init.sh --class Ftermite
+bindsym XF86Calculator exec --no-startup-id gnome-terminal -e ~/dotfiles/bin/python.init.sh --class Ftermite
 bindsym $mod+comma exec --no-startup-id gnome-terminal -e "vim ~/Sync" --class Ftermite
 bindsym $mod+period exec --no-startup-id gnome-terminal --class Ftermite
 bindsym --release Print exec --no-startup-id scrot -s ~/Pictures/screenshots/%s_%H%M_%d%m%Y_$wx$h.png

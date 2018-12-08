@@ -24,3 +24,5 @@ papirus-icon-theme
 arc-theme
 rofi
 mpv
+brightnessctl
+brightness-udev (put user in video and input group)

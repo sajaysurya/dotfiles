@@ -3,7 +3,7 @@ separator_block_width=15
 
 [currency]
 command=python3 ~/dotfiles/bin/currency.py
-interval=216000
+interval=once
 markup=pango
 
 [cpu]
