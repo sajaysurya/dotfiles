@@ -1,6 +1,10 @@
 separator=false
 separator_block_width=15
 
+[bandwidth]
+command=bash ~/dotfiles/bin/bandwidth.sh -i " " -o " "
+interval=1
+
 [currency]
 command=python3 ~/dotfiles/bin/currency.py
 interval=once
