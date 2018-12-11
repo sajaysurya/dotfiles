@@ -5,4 +5,4 @@
 
 # now a days i'm using i3, and the previous comment is irrelevant
 
-python -i ~/dotfiles/python.init.py
+python3 -i ~/dotfiles/python.init.py
