@@ -165,8 +165,8 @@ bar {
 exec --no-startup-id numlockx
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*.png
 exec --no-startup-id nm-applet
-exec --no-startup-id udiskie --tray
 exec --no-startup-id dropbox start
+#exec --no-startup-id udiskie --tray
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -180,10 +180,10 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- # decre
 
 # mics
 bindsym XF86Tools exec --no-startup-id i3lock -u
-for_window [class="Ftermite"] floating enable
-bindsym XF86Calculator exec --no-startup-id gnome-terminal -e ~/dotfiles/bin/python.init.sh --class Ftermite
-bindsym $mod+comma exec --no-startup-id gnome-terminal -e "vim ~/Sync" --class Ftermite
-bindsym $mod+period exec --no-startup-id gnome-terminal --class Ftermite
+for_window [class="Fterm"] floating enable
+bindsym XF86Calculator exec --no-startup-id gnome-terminal -e ~/dotfiles/bin/python.init.sh --class Fterm
+bindsym $mod+comma exec --no-startup-id gnome-terminal -e "vim ~/Sync" --class Fterm
+bindsym $mod+period exec --no-startup-id gnome-terminal --class Fterm
 bindsym --release Print exec --no-startup-id scrot -s ~/Pictures/screenshots/%s_%H%M_%d%m%Y_$wx$h.png
 
 # gaps
