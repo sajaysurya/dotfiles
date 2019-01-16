@@ -184,6 +184,7 @@ for_window [class="Fterm"] floating enable
 bindsym XF86Calculator exec --no-startup-id gnome-terminal -e ~/dotfiles/bin/python.init.sh --class Fterm
 bindsym $mod+comma exec --no-startup-id gnome-terminal -e "vim ~/Sync" --class Fterm
 bindsym $mod+period exec --no-startup-id gnome-terminal --class Fterm
+bindsym $mod+semicolon exec --no-startup-id gnome-terminal -e "ranger" --class Fterm
 bindsym --release Print exec --no-startup-id scrot -s ~/Pictures/screenshots/%s_%H%M_%d%m%Y_$wx$h.png
 
 # gaps
