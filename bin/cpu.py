@@ -7,8 +7,8 @@ def main():
     '''
     c-style main code
     '''
-    cpu = check_output('top -b -n 1 | grep Cpu', shell=True).decode().split(' id,')[0].split(' ')[-1]
-    fulltext = "<span font='FontAwesome'>\uf2db</span> {}%".format(cpu)
+    load = check_output('w | grep load', shell=True).decode().split(':')[-1].split(',')[:]
+    fulltext = "<span font='FontAwesome'>\uf085</span> {} {} {}".format(load[0], load[1], load[2])
     print(fulltext)
 
 if __name__ == "__main__":
