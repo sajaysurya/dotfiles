@@ -14,17 +14,13 @@
 bind J tabprev
 bind K tabnext
 
-"
-" GUI changes
-"
-guiset_quiet gui none
-
 " 
 " Custom Search Engines
 "
 set searchurls.ddg https://duckduckgo.com/?q=
 set searchurls.azn https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=
 set searchurls.dic https://www.vocabulary.com/dictionary/
+
 "
 " Misc settings
 "

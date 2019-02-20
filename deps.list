@@ -26,3 +26,4 @@ mpv
 brightnessctl
 brightness-udev (put user in video and input group)
 nautilus-dropbox
+ppa-purge  # to properly remove ppa
