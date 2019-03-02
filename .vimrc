@@ -21,6 +21,7 @@ Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'airblade/vim-gitgutter'         "shows per line changes in file
 Plugin 'lervag/vimtex'                  "minimal plugin for latex
 Plugin 'rhysd/vim-grammarous'           "for checking grammar
+Plugin 'tadaa/vimade'                   "for fading inactive buffers
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -46,6 +47,7 @@ set encoding=utf-8
 " set spell-check
 autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd BufRead,BufNewFile *.tex setlocal spell
+autocmd BufRead,BufNewFile *.rst setlocal spell
 
 " not to flod python docstring and import
 let g:SimpylFold_fold_docstring	= 0
@@ -63,7 +65,7 @@ colorscheme github
 " tab settings
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
-" get doc shortcut
+" shortcuts
 nnoremap <Leader>d :YcmCompleter GetDoc <CR>
 
 " force YCM to run Jedi using python in the default environment
