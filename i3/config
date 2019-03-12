@@ -169,6 +169,8 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- # decre
 # mics
 bindsym XF86Tools exec --no-startup-id i3lock -u
 for_window [class="Fterm"] floating enable
+for_window [class="Fterm"] resize set 640 480
+for_window [class="Fterm"] move position center
 bindsym XF86Calculator exec --no-startup-id gnome-terminal -e ~/dotfiles/bin/python.init.sh --class Fterm
 bindsym $mod+comma exec --no-startup-id gnome-terminal -e "vim ~/Sync" --class Fterm
 bindsym $mod+period exec --no-startup-id gnome-terminal --class Fterm
