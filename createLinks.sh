@@ -8,6 +8,7 @@ rm -r ~/.config/gtk-3.0
 # add symlinks
 ln -s ~/dotfiles/.bashrc ~/.bashrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.Xresources ~/.Xresources
 ln -s ~/dotfiles/.ssh/config ~/.ssh/config
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/youtube-dl ~/.config/youtube-dl

@@ -10,7 +10,3 @@ powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . /usr/share/powerline/bindings/bash/powerline.sh
-
-if [ "$TERM" != "screen-256color" ] ; then
-	export TERM=xterm-256color
-fi
