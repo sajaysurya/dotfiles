@@ -60,6 +60,11 @@ let g:grammarous#languagetool_cmd = 'languagetool'
 " make slime use tmux
 let g:slime_target = "tmux"
 
+" ALE error display format
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
 " to use system clipboard
 set clipboard=unnamedplus
 
