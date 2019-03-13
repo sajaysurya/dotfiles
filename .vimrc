@@ -21,6 +21,7 @@ Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'airblade/vim-gitgutter'         "shows per line changes in file
 Plugin 'lervag/vimtex'                  "minimal plugin for latex
 Plugin 'rhysd/vim-grammarous'           "for checking grammar
+Plugin 'jpalardy/vim-slime'             "slime for REPL
 Plugin 'tadaa/vimade'                   "for fading inactive buffers
 
 " All of your Plugins must be added before the following line
@@ -56,6 +57,9 @@ let g:SimpylFold_fold_import	= 0
 " LanguageTool executable for grammarous
 let g:grammarous#languagetool_cmd = 'languagetool'
 
+" make slime use tmux
+let g:slime_target = "tmux"
+
 " to use system clipboard
 set clipboard=unnamedplus
 
@@ -67,6 +71,7 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " shortcuts
 nnoremap <Leader>d :YcmCompleter GetDoc <CR>
+nnoremap <Leader>z :call GetPinyin() <CR>
 
 " force YCM to run Jedi using python in the default environment
 let g:ycm_python_binary_path = 'python'
@@ -92,3 +97,6 @@ else
     let &t_EI .= "\<Esc>[1 q"
     autocmd VimLeave * silent !echo -ne "\033[0 q"
 endif
+
+" set runtimepath for vimyin
+set runtimepath+=/home/sajay/lab/vimyin/
