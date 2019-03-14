@@ -12,6 +12,7 @@ ln -s ~/dotfiles/.Xresources ~/.Xresources
 ln -s ~/dotfiles/.ssh/config ~/.ssh/config
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/youtube-dl ~/.config/youtube-dl
+ln -s ~/dotfiles/qpdfview ~/.config/qpdfview
 ln -s ~/dotfiles/mpv ~/.config/mpv
 ln -s ~/dotfiles/i3 ~/.config/i3
 ln -s ~/dotfiles/i3blocks ~/.config/i3blocks
