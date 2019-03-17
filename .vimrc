@@ -13,6 +13,7 @@ Plugin 'tpope/vim-sensible'             "sensible settings
 Plugin 'valloric/youcompleteme'         "auto complete
 Plugin 'w0rp/ale'                       "Async Linting Engine
 Plugin 'tpope/vim-fugitive'             "git management
+Plugin 'tpope/vim-unimpaired'           "good shortcuts
 Plugin 'tpope/vim-surround'             "for surrounds - brackets, tags..
 Plugin 'tmhedberg/SimpylFold'           "code folding - functions, classes
 Plugin 'christoomey/vim-tmux-navigator' "seamless navigation between tmux and vim
@@ -23,6 +24,7 @@ Plugin 'lervag/vimtex'                  "minimal plugin for latex
 Plugin 'rhysd/vim-grammarous'           "for checking grammar
 Plugin 'jpalardy/vim-slime'             "slime for REPL
 Plugin 'tadaa/vimade'                   "for fading inactive buffers
+Plugin 'sajaysurya/vimyin'              "for learning mandarin
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -75,8 +77,7 @@ colorscheme github
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " shortcuts
-nnoremap <Leader>d :YcmCompleter GetDoc <CR>
-nnoremap <Leader>z :call GetPinyin() <CR>
+nnoremap <silent><Leader>d :YcmCompleter GetDoc <CR>
 
 " force YCM to run Jedi using python in the default environment
 let g:ycm_python_binary_path = 'python'
@@ -102,6 +103,3 @@ else
     let &t_EI .= "\<Esc>[1 q"
     autocmd VimLeave * silent !echo -ne "\033[0 q"
 endif
-
-" set runtimepath for vimyin
-set runtimepath+=/home/sajay/lab/vimyin/
