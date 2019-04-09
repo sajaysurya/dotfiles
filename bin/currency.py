@@ -12,8 +12,7 @@ def main():
     usd = data['rates']['INR']
     gbp = usd/data['rates']['GBP']
     eur = usd/data['rates']['EUR']
-    jpy = usd/data['rates']['JPY']
-    fulltext = 'USD:{0:.2f} GBP:{1:.2f} JPY:{2:.4f}'.format(usd, gbp, jpy)
+    fulltext = 'USD:{0:.2f} GBP:{1:.2f} EUR:{2:.4f}'.format(usd, gbp, eur)
     print(fulltext)
 
 if __name__ == "__main__":
