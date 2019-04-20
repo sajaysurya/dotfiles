@@ -15,6 +15,7 @@ Plugin 'w0rp/ale'                       "Async Linting Engine
 Plugin 'jpalardy/vim-slime'             "slime for REPL
 Plugin 'tpope/vim-unimpaired'           "good shortcuts
 Plugin 'tmhedberg/SimpylFold'           "code folding - functions, classes
+Plugin 'Vimjas/vim-python-pep8-indent'  "proper python indentation
 Plugin 'airblade/vim-gitgutter'         "shows per line changes in file
 Plugin 'christoomey/vim-tmux-navigator' "seamless navigation between tmux and vim
 "eyecandy
