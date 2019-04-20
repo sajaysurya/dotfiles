@@ -9,10 +9,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'           "Package Manager
 Plugin 'tpope/vim-sensible'             "sensible settings
 Plugin 'tpope/vim-fugitive'             "git management
-Plugin 'valloric/youcompleteme'         "auto complete
+Plugin 'Valloric/YouCompleteMe'         "completion
 Plugin 'w0rp/ale'                       "Async Linting Engine
 "useful
-Plugin 'vim-scripts/indentpython.vim'   "proper indentation python
 Plugin 'jpalardy/vim-slime'             "slime for REPL
 Plugin 'tpope/vim-unimpaired'           "good shortcuts
 Plugin 'tmhedberg/SimpylFold'           "code folding - functions, classes
@@ -37,8 +36,8 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 colorscheme github
 
 " shortcuts
-nnoremap <silent><Leader>d :YcmCompleter GetDoc <CR>
-nnoremap <silent><Leader>g :YcmCompleter GotoDefinitionElseDeclaration <CR>
+nnoremap <silent><Leader>d :YcmCompleter GetDoc<CR>
+nnoremap <silent><Leader>g :YcmCompleter GoTo<CR>
 
 "set spell-check
 autocmd BufRead,BufNewFile *.md setlocal spell
