@@ -2,26 +2,26 @@ separator=false
 separator_block_width=15
 
 [bandwidth]
-command=bash ~/dotfiles/bin/bandwidth.sh -i " " -o " "
+command=bash ~/dotfiles/bin/bandwidth.sh
 interval=1
 
 [currency]
-command=python3 ~/dotfiles/bin/currency.py
+command=python ~/dotfiles/bin/currency.py
 interval=once
 markup=pango
 
 [cpu]
-command=python3 ~/dotfiles/bin/cpu.py
+command=python ~/dotfiles/bin/cpu.py
 interval=1
 markup=pango
 
 [memory]
-command=python3 ~/dotfiles/bin/mem.py
+command=python ~/dotfiles/bin/mem.py
 interval=1
 markup=pango
 
 [battery]
-command=python3 ~/dotfiles/bin/battery.py
+command=python ~/dotfiles/bin/battery.py
 interval=30
 markup=pango
 
