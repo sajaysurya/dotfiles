@@ -153,7 +153,6 @@ bar {
 exec --no-startup-id numlockx
 exec --no-startup-id feh --randomize --bg-scale ~/Pictures/Wallpapers/*.png
 exec --no-startup-id nm-applet
-exec --no-startup-id dropbox start
 exec --no-startup-id xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
 
 # Pulse Audio controls
@@ -167,7 +166,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5% # increas
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- # decrease screen brightness
 
 # mics
-bindsym XF86Tools exec --no-startup-id i3lock -u
+bindsym XF86Tools exec --no-startup-id i3lock --clock --blur 5 -u
 for_window [class="Fterm"] floating enable
 for_window [class="Fterm"] resize set 640 480
 for_window [class="Fterm"] move position center
