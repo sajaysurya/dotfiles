@@ -14,6 +14,7 @@ ln -s ~/dotfiles/.ssh/config ~/.ssh/config
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/youtube-dl ~/.config/youtube-dl
 ln -s ~/dotfiles/mpv ~/.config/mpv
+ln -s ~/dotfiles/rofi ~/.config/rofi
 ln -s ~/dotfiles/i3 ~/.config/i3
 ln -s ~/dotfiles/i3blocks ~/.config/i3blocks
 ln -s ~/dotfiles/dunst ~/.config/dunst
