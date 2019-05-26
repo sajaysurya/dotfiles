@@ -53,3 +53,7 @@ cmake
 brightnessctl (AUR)
 i3lock-color
 xclip
+fcitx
+fcitx-googlepinyin
+fcitx-configtool
+fcitx-im
