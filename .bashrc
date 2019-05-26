@@ -2,6 +2,12 @@
 alias ls="ls --color -lah"
 alias rm="rm -i"
 
+# add bin folder to path
+PATH=$PATH:~/bin
+
+# conda configuration
+. /home/sajay/miniconda3/etc/profile.d/conda.sh
+
 # get rsa password after login, before starting x
 eval $(keychain --eval --quiet id_rsa)
 
