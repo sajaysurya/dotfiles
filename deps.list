@@ -1,7 +1,55 @@
-compulsory
-----------
-brightnessctl
-brightness-udev (put user in video and input group)
-nautilus-dropbox
-ppa-purge  # to properly remove ppa
+to install Arch linux:
+--------------------------
+base
+base-devel
+networkmanager
+network-manager-applet
+bash-completion
+intel-ucode
+firefox
+i3
+xorg
+xorg-xinit
+xterm
+openssh
+keychain
+git
+rofi
+pikaur (AUR)
+google-chrome (AUR)
+systemd-boot-pacman-hook (AUR)
+ttf-dejavu
+ttf-liberation
+ttf-roboto
+ttf-ubuntu-font-family
+ttf-font-awesome
+powerline-fonts-git (AUR)
+powerline
+tmux
+vim
+numlockx
+-> create .ssh
+-> get dotfiles
+feh
+scrot
+ranger
+dunst
+libnotify
+youtube-dl
+python-numpy
+      -scipy
+      -sympy
+      -matplotlib
+      -pandas
+      -requests
+      -pyperclip
+noto-fonts-cjk
+noto-fonts-emoji
+acpi
+pulseaudio
+alsa-utils
+clang
+cmake
+brightnessctl (AUR)
+i3lock-color
 xclip
