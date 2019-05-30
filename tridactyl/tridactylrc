@@ -1,0 +1,27 @@
+" Place this at $XDG_CONFIG_DIR/tridactyl/tridactylrc (that's
+" ~/.config/tridactyl/tridactylrc to mere mortals) or ~/.tridactylrc and
+" install the native messenger (:installnative in Tridactyl). Run :source to
+" get it in the browser, or just restart.
+
+" NB: If you want "vim-like" behaviour where removing a line from 
+" here makes the setting disappear, uncomment the line below.
+sanitise tridactyllocal tridactylsync
+
+"
+" GUI changes
+"
+"guiset_quiet gui none
+
+" 
+" Custom Search Engines
+"
+set searchurls.ddg https://duckduckgo.com/?q=
+set searchurls.azn https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=
+set searchurls.dic https://www.vocabulary.com/dictionary/
+
+"
+" Misc settings
+"
+set searchengine google
+set allowautofocus false
+colors dark

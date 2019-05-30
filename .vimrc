@@ -58,3 +58,6 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 " force YCM to run Jedi using python in the default environment
 let g:ycm_python_binary_path = 'python'
+
+" makes vim use system python even inside conda
+set pythonthreehome=/usr

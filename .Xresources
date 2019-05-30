@@ -23,7 +23,7 @@ xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
 ! Default font and size
 xterm*faceName:Ubuntu Mono derivative Powerline:antialias=true:pixelsize=14
-xterm*faceNameDoublesize:Noto Sans Mono CJK SC Regular:antialias=true:pixelsize=14
+xterm*faceNameDoublesize:Noto Sans Mono CJK SC:antialias=true:pixelsize=14
 
 ! special
 xterm*foreground:   #1d1f21
