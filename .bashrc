@@ -4,6 +4,7 @@ alias rm="rm -i"
 
 # add bin folder to path
 PATH=$PATH:~/bin
+PATH=$PATH:~/.local/bin
 
 # conda configuration
 . /home/sajay/miniconda3/etc/profile.d/conda.sh
