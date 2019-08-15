@@ -153,6 +153,7 @@ bar {
 exec --no-startup-id numlockx
 exec --no-startup-id feh --randomize --bg-scale ~/pictures/wallpapers/*.png
 exec --no-startup-id nm-applet
+exec --no-startup-id udiskie -ans
 exec --no-startup-id xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
 
 # Pulse Audio controls
