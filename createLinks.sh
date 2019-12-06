@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # remove unwanted files first
-rm -f ~/.bashrc
+rm -f ~/.zshrc
 rm -rf ~/.config/gtk-3.0
 rm -rf ~/.config/i3
 
 # add symlinks
-ln -s ~/dotfiles/.bashrc ~/.bashrc
+ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.pam_environment ~/.pam_environment
 ln -s ~/dotfiles/.Xresources ~/.Xresources

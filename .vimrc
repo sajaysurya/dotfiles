@@ -16,9 +16,7 @@ Plugin 'jpalardy/vim-slime'             "slime for REPL
 Plugin 'tpope/vim-unimpaired'           "good shortcuts
 Plugin 'tmhedberg/SimpylFold'           "code folding - functions, classes
 Plugin 'Vimjas/vim-python-pep8-indent'  "proper python indentation
-Plugin 'airblade/vim-gitgutter'         "shows per line changes in file
 "eyecandy
-Plugin 'tadaa/vimade'                   "for fading inactive buffers
 Plugin 'flazz/vim-colorschemes'         "good collection of color schemes
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 "misc
