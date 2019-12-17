@@ -1,5 +1,8 @@
+# zmodload zsh/zprof  # uncomment to profile the script
+
 # vi keybindings
 bindkey -v
+KEYTIMEOUT=1  # wait 100ms after pressing esc
 
 # aliases for ease
 alias ls="ls --color -lah"
@@ -10,6 +13,7 @@ PATH=$PATH:~/bin
 PATH=$PATH:~/.local/bin
 
 # configure powerline
+powerline-daemon -q
 . /usr/share/powerline/bindings/zsh/powerline.zsh
 
 # get rsa password after login, before starting x
