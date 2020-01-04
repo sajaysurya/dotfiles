@@ -1,4 +1,7 @@
 # zmodload zsh/zprof  # uncomment to profile the script
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
 
 # vi keybindings
 bindkey -v
