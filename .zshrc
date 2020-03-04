@@ -8,7 +8,7 @@ bindkey -v
 KEYTIMEOUT=1  # wait 100ms after pressing esc
 
 # aliases for ease
-alias ls="ls --color -lah"
+alias ls="ls -lahG"
 alias rm="rm -i"
 
 # add bin folder to path
@@ -17,7 +17,7 @@ PATH=$PATH:~/.local/bin
 
 # configure powerline
 powerline-daemon -q
-. /usr/share/powerline/bindings/zsh/powerline.zsh
+. /usr/local/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # get rsa password after login, before starting x
 eval $(keychain --eval --quiet id_rsa)

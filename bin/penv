@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 '''
 A simple utility to create and manage python virtual environments
 '''
@@ -49,7 +49,7 @@ def create_environment(name, loc):
     '''
     fname = loc / Path(name)
     if not fname.exists():
-        command = ['python', '-m', 'venv', fname]
+        command = ['python3', '-m', 'venv', fname]
         run(command, capture_output=True)
     else:
         print('the said environment already exists')

@@ -19,8 +19,6 @@ Plugin 'Vimjas/vim-python-pep8-indent'  "proper python indentation
 "eyecandy
 Plugin 'flazz/vim-colorschemes'         "good collection of color schemes
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-"misc
-Plugin 'sajaysurya/vimyin'              "for learning mandarin
 
 "all of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -56,6 +54,3 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 " force YCM to run Jedi using python in the default environment
 let g:ycm_python_binary_path = 'python'
-
-" makes vim use system python even inside conda
-set pythonthreehome=/usr
