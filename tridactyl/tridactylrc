@@ -7,11 +7,6 @@
 " here makes the setting disappear, uncomment the line below.
 sanitise tridactyllocal tridactylsync
 
-"
-" GUI changes
-"
-"guiset_quiet gui none
-
 " 
 " Custom Search Engines
 "
