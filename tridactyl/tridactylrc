@@ -15,6 +15,11 @@ set searchurls.azn https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3D
 set searchurls.dic https://www.vocabulary.com/dictionary/
 
 "
+" Binds
+"
+bind it tabduplicate
+
+"
 " Misc settings
 "
 set searchengine google
