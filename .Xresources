@@ -1,6 +1,7 @@
 ! Xfont settings
 Xft.antialias: 1
 Xft.lcdfilter:lcddefault
+Xcursor.size: 24
 
 ! basic xterm settings
 xterm*termName:xterm-256color

@@ -5,6 +5,9 @@
 # using win as the mod key
 set $mod Mod1
 
+# set wallpaper
+set $wallpaper ~/pictures/wallpapers/wallpaper.png
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:UbuntuMono, FontAwesome 12
@@ -151,7 +154,7 @@ bar {
 }
 # startup applications
 exec --no-startup-id numlockx
-exec --no-startup-id feh --randomize --bg-scale ~/pictures/wallpapers/*.png
+exec --no-startup-id feh --randomize --bg-scale $wallpaper
 exec --no-startup-id nm-applet
 exec --no-startup-id udiskie -ans
 exec --no-startup-id xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
@@ -179,8 +182,8 @@ bindsym $mod+period exec --no-startup-id xterm -class Fterm
 bindsym --release Print exec --no-startup-id scrot -s ~/pictures/screenshots/%s_%H%M_%d%m%Y_$wx$h.png
 
 # monitor utils
-bindsym XF86Display exec --no-startup-id xrandr --output HDMI-2 --mode 3840x2160 --pos 0x0 --output eDP-1 --pos 960x2160 --primary 
-bindsym $mod+XF86Display exec --no-startup-id xrandr --output HDMI-2 --off
+bindsym XF86Display exec --no-startup-id xrandr --output HDMI2 --mode 3840x2160 --pos 0x0 --output eDP1 --pos 960x2160 --primary && feh --randomize --bg-scale $wallpaper
+bindsym $mod+XF86Display exec --no-startup-id xrandr --output HDMI2 --off && feh --randomize --bg-scale $wallpaper
 bindsym $mod+Shift+Up move workspace to output up
 bindsym $mod+Shift+Down move workspace to output down
 
