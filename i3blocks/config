@@ -4,6 +4,12 @@ separator_block_width=15
 [bandwidth]
 command=bash ~/dotfiles/bin/bandwidth.sh
 interval=1
+INTERFACE=wlp4s0
+
+[updates]
+command=python ~/dotfiles/bin/updates.py
+interval=300
+markup=pango
 
 [currency]
 command=python ~/dotfiles/bin/currency.py
