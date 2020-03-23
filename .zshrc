@@ -7,6 +7,10 @@ zstyle ':completion:*' menu select
 bindkey -v
 KEYTIMEOUT=1  # wait 100ms after pressing esc
 
+# record history
+SAVEHIST=100
+HISTFILE=~/.zsh_history
+
 # aliases for ease
 alias ls="ls --color -lah"
 alias rm="rm -i"
