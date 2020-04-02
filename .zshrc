@@ -1,4 +1,8 @@
 # zmodload zsh/zprof  # uncomment to profile the script
+
+# auto complete menu
+zmodload zsh/complist  # for menuselect
+bindkey -M menuselect '^M' .accept-line  # avoid pressing enter twice
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
@@ -10,6 +14,8 @@ KEYTIMEOUT=1  # wait 100ms after pressing esc
 # record history
 SAVEHIST=100
 HISTFILE=~/.zsh_history
+setopt inc_append_history
+setopt share_history
 
 # aliases for ease
 alias ls="ls --color -lah"
