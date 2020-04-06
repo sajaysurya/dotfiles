@@ -24,4 +24,4 @@ bind it tabduplicate
 "
 set searchengine google
 set allowautofocus false
-colors dark
+colors bat
