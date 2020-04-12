@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# keymap changes
+setxkbmap -option caps:swapescape
+
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
