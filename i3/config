@@ -68,7 +68,7 @@ bindsym $mod+y focus child
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 ""
-set $ws2 ""
+set $ws2 ""
 set $ws3 ""
 set $ws4 ""
 set $ws5 ""
@@ -76,7 +76,7 @@ set $ws6 ""
 set $ws7 ""
 set $ws8 ""
 set $ws9 ""
-set $ws10 ""
+set $ws10 ""
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -179,7 +179,7 @@ bindsym $mod+semicolon exec --no-startup-id xterm -class Fterm -e vim ~/sync/.to
 bindsym $mod+apostrophe exec --no-startup-id xterm -class Fterm -e vim ~/sync/.scratch
 bindsym $mod+comma exec --no-startup-id xterm -class Fterm -e ranger 
 bindsym $mod+period exec --no-startup-id xterm -class Fterm
-bindsym --release Print exec --no-startup-id scrot -s ~/pictures/screenshots/%s_%H%M_%d%m%Y_$wx$h.png
+bindsym --release Print exec --no-startup-id scrot -s ~/pictures/screenshots/%s_%H%M_%d%m%Y_$wx$h.png -e 'xclip -selection clipboard -target image/png -i $f'
 
 # monitor utils
 bindsym XF86Display exec --no-startup-id xrandr --output HDMI2 --mode 3840x2160 --pos 0x0 --output eDP1 --pos 960x2160 --primary && feh --randomize --bg-scale $wallpaper
