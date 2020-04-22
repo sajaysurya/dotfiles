@@ -176,7 +176,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- # decre
 bindsym $mod+Super_L exec --no-startup-id i3lock --clock --blur 5 -u
 for_window [class="mpv"] floating enable
 for_window [class="mpv"] resize set 1280 960
-for_window [class="mpv"] move position center
+for_window [class="mpv"] move position 100 100
 for_window [class="Fterm"] floating enable
 for_window [class="Fterm"] resize set 640 480
 for_window [class="Fterm"] move position center
@@ -185,6 +185,7 @@ bindsym $mod+semicolon exec --no-startup-id xterm -class Fterm -e vim ~/sync/.to
 bindsym $mod+apostrophe exec --no-startup-id xterm -class Fterm -e vim ~/sync/.scratch
 bindsym $mod+comma exec --no-startup-id xterm -class Fterm -e ranger 
 bindsym $mod+period exec --no-startup-id xterm -class Fterm
+bindsym $mod+o exec --no-startup-id i3-msg open
 bindsym --release Print exec --no-startup-id scrot -s ~/pictures/screenshots/%s_%H%M_%d%m%Y_$wx$h.png -e 'xclip -selection clipboard -target image/png -i $f'
 
 # monitor utils
