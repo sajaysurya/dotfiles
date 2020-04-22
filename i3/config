@@ -117,16 +117,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 2 px or 2 ppt
-        bindsym j resize grow height 2 px or 2 ppt
-        bindsym k resize shrink height 2 px or 2 ppt
-        bindsym l resize grow width 2 px or 2 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 2 px or 2 ppt
-        bindsym Down resize grow height 2 px or 2 ppt
-        bindsym Up resize shrink height 2 px or 2 ppt
-        bindsym Right resize grow width 2 px or 2 ppt
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -142,22 +142,22 @@ bar {
     tray_output primary
     status_command i3blocks
     i3bar_command  i3bar -t
-    position top
+    position bottom
     colors {
-        background #22222288
-        statusline #aaaaaa
-        separator #666666
+        background #00000077
+        statusline #ffffffff
+        separator #00000077
         #                  border  backgr. text
-        focused_workspace  #222222 #2e9ef4 #ffffff
-        active_workspace   #222222 #2e9ef4 #ffffff
-        inactive_workspace #222222 #222222 #888888
-        urgent_workspace   #222222 #900000 #ffffff
+        focused_workspace  #00000077 #ffa500ff #ffffffff
+        active_workspace   #00000077 #ffa500ff #ffffffff
+        inactive_workspace #00000077 #00000077 #ffffffff
+        urgent_workspace   #00000077 #900000ff #ffffffff
    }
 }
 # startup applications
-exec --no-startup-id picom -b
+exec --no-startup-id picom -b --no-fading-openclose
 exec --no-startup-id numlockx
-exec --no-startup-id feh --randomize --bg-scale $wallpaper
+exec --no-startup-id watch -n 300 feh --randomize --bg-scale $wallpaper &> /dev/null &
 exec --no-startup-id nm-applet
 exec --no-startup-id udiskie -ans
 exec --no-startup-id xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
@@ -174,6 +174,9 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- # decre
 
 # mics
 bindsym $mod+Super_L exec --no-startup-id i3lock --clock --blur 5 -u
+for_window [class="mpv"] floating enable
+for_window [class="mpv"] resize set 1280 960
+for_window [class="mpv"] move position center
 for_window [class="Fterm"] floating enable
 for_window [class="Fterm"] resize set 640 480
 for_window [class="Fterm"] move position center
@@ -190,8 +193,9 @@ bindsym $mod+XF86Display exec --no-startup-id xrandr --output HDMI2 --off && feh
 bindsym $mod+Shift+Prior move workspace to output up
 bindsym $mod+Shift+Next move workspace to output down
 
-# gaps
-for_window [class="^.*"] border pixel 5
+# remove borders and introduce gaps
+for_window [class="^.*"] border pixel 0
+gaps inner 10
 
 # color settings
 # class                 border  backgr. text    indicator child_border

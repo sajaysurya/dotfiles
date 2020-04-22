@@ -16,7 +16,7 @@ def color(percent):
         return "#FF0000"
     if percent < 50:
         return "#FFCC00"
-    return "#AAAAAA"
+    return "#FFFFFF"
 
 # stands for charging
 FA_LIGHTNING = "<span color='yellow'><span font='FontAwesome'>\uf0e7</span></span>"

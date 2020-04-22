@@ -4,7 +4,6 @@ base
 base-devel
 networkmanager
 network-manager-applet
-bash-completion
 intel-ucode
 firefox
 i3
@@ -15,7 +14,7 @@ openssh
 keychain
 git
 rofi
-pikaur (AUR)
+yay (AUR)
 google-chrome (AUR)
 systemd-boot-pacman-hook (AUR)
 ttf-dejavu
@@ -25,6 +24,7 @@ ttf-ubuntu-font-family
 ttf-font-awesome
 powerline-fonts-git (AUR)
 powerline
+picom
 tmux
 vim
 numlockx
@@ -54,6 +54,7 @@ brightnessctl (AUR)
 i3lock-color
 xclip
 fcitx
+fcitx-cloudpinyin
 fcitx-googlepinyin
 fcitx-configtool
 fcitx-im
