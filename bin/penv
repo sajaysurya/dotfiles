@@ -1,11 +1,10 @@
-#!/usr/bin/env python
+#!/bin/python3
 '''
 A simple utility to create and manage python virtual environments
 '''
 import argparse
 from pathlib import Path
-from subprocess import run
-import pyperclip
+from subprocess import run, Popen, PIPE
 
 def activate_environment(name, loc):
     '''
@@ -19,7 +18,8 @@ def activate_environment(name, loc):
     fname = loc / Path(name)
     if fname.exists():
         command = 'source ' + str(fname / Path('bin') / Path('activate'))
-        pyperclip.copy(command)
+        com1 = Popen(['echo', command], stdout=PIPE)
+        com2 = Popen(['xsel', '-bi'], stdin=com1.stdout, stdout=PIPE)
         print('necessary command copied to clipboard')
     else:
         print('the said environment does not exist')
@@ -49,7 +49,7 @@ def create_environment(name, loc):
     '''
     fname = loc / Path(name)
     if not fname.exists():
-        command = ['python', '-m', 'venv', fname]
+        command = ['python3', '-m', 'venv', fname]
         run(command, capture_output=True)
     else:
         print('the said environment already exists')
