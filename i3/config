@@ -149,13 +149,13 @@ bar {
         separator #00000077
         #                  border  backgr. text
         focused_workspace  #00000077 #ffa500ff #ffffffff
-        active_workspace   #00000077 #ffa500ff #ffffffff
+        active_workspace   #00000077 #00000077 #ffa500ff
         inactive_workspace #00000077 #00000077 #ffffffff
         urgent_workspace   #00000077 #900000ff #ffffffff
    }
 }
 # startup applications
-exec --no-startup-id picom -b --no-fading-openclose
+exec --no-startup-id picom -b --log-level=trace &> ~/.picom.log
 exec --no-startup-id numlockx
 exec --no-startup-id watch -n 300 feh --randomize --bg-scale $wallpaper &> /dev/null &
 exec --no-startup-id nm-applet
@@ -175,10 +175,10 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- # decre
 # mics
 bindsym $mod+Super_L exec --no-startup-id i3lock --clock --blur 5 -u
 for_window [class="mpv"] floating enable
-for_window [class="mpv"] resize set 1280 960
-for_window [class="mpv"] move position 100 100
+for_window [class="mpv"] resize set 768 576
+for_window [class="mpv"] move position center
 for_window [class="Fterm"] floating enable
-for_window [class="Fterm"] resize set 640 480
+for_window [class="Fterm"] resize set 576 768
 for_window [class="Fterm"] move position center
 bindsym XF86Calculator exec --no-startup-id xterm -class Fterm -e ~/dotfiles/bin/python.init.sh
 bindsym $mod+semicolon exec --no-startup-id xterm -class Fterm -e vim ~/sync/.todo
@@ -186,7 +186,7 @@ bindsym $mod+apostrophe exec --no-startup-id xterm -class Fterm -e vim ~/sync/.s
 bindsym $mod+comma exec --no-startup-id xterm -class Fterm -e ranger 
 bindsym $mod+period exec --no-startup-id xterm -class Fterm
 bindsym $mod+o exec --no-startup-id i3-msg open
-bindsym --release Print exec --no-startup-id scrot -s ~/pictures/screenshots/%s_%H%M_%d%m%Y_$wx$h.png -e 'xclip -selection clipboard -target image/png -i $f'
+bindsym --release Print exec --no-startup-id maim -s | tee ~/pictures/screenshots/$(date +'%Y-%m-%d_%H:%M:%S:%N').png | xclip -selection clipboard -t image/png
 
 # monitor utils
 bindsym XF86Display exec --no-startup-id xrandr --output HDMI2 --mode 3840x2160 --pos 0x0 --output eDP1 --pos 960x2160 --primary && feh --randomize --bg-scale $wallpaper
@@ -195,15 +195,15 @@ bindsym $mod+Shift+Prior move workspace to output up
 bindsym $mod+Shift+Next move workspace to output down
 
 # remove borders and introduce gaps
-for_window [class="^.*"] border pixel 0
-gaps inner 10
+for_window [class="^.*"] border pixel 5
+gaps inner 5
 
 # color settings
-# class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #222222 #2e9ef4
-client.focused_inactive #333333 #5f676a #ffffff #222222 #222222
-client.unfocused        #333333 #222222 #888888 #222222 #222222
-client.urgent           #2f343a #900000 #ffffff #900000 #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
+# class                 border          backgr.         text            indicator       child_border
+client.focused          #4c7899         #285577         #ffffff         #222222         #ff7f00
+client.focused_inactive #333333         #5f676a         #ffffff         #222222         #222222
+client.unfocused        #333333         #222222         #888888         #222222         #222222
+client.urgent           #2f343a         #900000         #ffffff         #900000         #900000
+client.placeholder      #000000         #0c0c0c         #ffffff         #000000         #0c0c0c
 
 client.background       #222222
