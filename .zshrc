@@ -12,7 +12,7 @@ bindkey -v
 KEYTIMEOUT=1  # wait 100ms after pressing esc
 
 # record history
-SAVEHIST=100
+SAVEHIST=10000
 HISTFILE=~/.zsh_history
 setopt inc_append_history
 setopt share_history
@@ -31,6 +31,9 @@ powerline-daemon -q
 
 # get rsa password after login, before starting x
 eval $(keychain --eval --quiet id_rsa)
+
+# breakpoint for python
+export PYTHONBREAKPOINT=ipdb.set_trace
 
 # to start x at login (only if no other display is running)
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
