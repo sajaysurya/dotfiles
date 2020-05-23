@@ -141,17 +141,18 @@ bindsym $mod+r mode "resize"
 bar {
     tray_output primary
     status_command i3blocks
-    i3bar_command  i3bar -t
+    i3bar_command  i3bar
+    # i3bar_command  i3bar -t  # to enable transparency
     position bottom
     colors {
-        background #00000077
+        background #000000ff
         statusline #ffffffff
-        separator #00000077
+        separator #000000ff
         #                  border  backgr. text
-        focused_workspace  #00000077 #ffa500ff #ffffffff
-        active_workspace   #00000077 #00000077 #ffa500ff
-        inactive_workspace #00000077 #00000077 #ffffffff
-        urgent_workspace   #00000077 #900000ff #ffffffff
+        focused_workspace  #000000ff #ff7f00ff #ffffffff
+        active_workspace   #000000ff #000000ff #ff7f00ff
+        inactive_workspace #000000ff #000000ff #ffffffff
+        urgent_workspace   #000000ff #900000ff #ffffffff
    }
 }
 # startup applications
@@ -196,7 +197,7 @@ bindsym $mod+Shift+Next move workspace to output down
 
 # remove borders and introduce gaps
 for_window [class="^.*"] border pixel 5
-gaps inner 5
+gaps inner 0
 
 # color settings
 # class                 border          backgr.         text            indicator       child_border
