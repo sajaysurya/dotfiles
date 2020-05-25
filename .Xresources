@@ -1,7 +1,15 @@
+! set a high dpi and then scale each monitor using xrandr
+!Xft.dpi: 192
+
 ! Xfont settings
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
 Xft.antialias: 1
-Xft.lcdfilter:lcddefault
+Xft.rgba: rgb
 Xcursor.size: 24
+!Xcursor.size: 48
 
 ! basic xterm settings
 xterm*termName:xterm-256color
@@ -28,6 +36,8 @@ xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 ! Default font and size
 xterm*faceName:Ubuntu Mono derivative Powerline:antialias=true:pixelsize=14
 xterm*faceNameDoublesize:Noto Sans Mono CJK SC:antialias=true:pixelsize=14
+!xterm*faceName:Ubuntu Mono derivative Powerline:antialias=true:pixelsize=28
+!xterm*faceNameDoublesize:Noto Sans Mono CJK SC:antialias=true:pixelsize=28
 
 ! special
 xterm*foreground:   #1d1f21
