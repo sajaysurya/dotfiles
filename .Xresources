@@ -75,4 +75,5 @@ xterm*Translations: #override \
                  Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
 
 ! send <c-h> instead of backspace
-XTerm*ptyInitialErase: true
+XTerm.vt100.backarrowKey: false
+XTerm.ttyModes: erase ^?
