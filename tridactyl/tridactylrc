@@ -20,6 +20,11 @@ set searchurls.dic https://www.vocabulary.com/dictionary/
 bind it tabduplicate
 
 "
+" GUI changes
+"
+guiset hoverlink none
+
+"
 " Misc settings
 "
 set searchengine google

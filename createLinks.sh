@@ -18,6 +18,7 @@ rm -rf ~/.config/powerline
 rm -rf ~/.config/tridactyl
 rm -rf ~/.config/youtube-dl
 rm -rf ~/.config/picom.conf
+rm -rf ~/.config/mimeapps.list
 
 rm -rf ~/bin
 rm -rf ~/.ssh/config
@@ -40,6 +41,7 @@ ln -s ~/dotfiles/powerline ~/.config/powerline
 ln -s ~/dotfiles/tridactyl ~/.config/tridactyl
 ln -s ~/dotfiles/youtube-dl ~/.config/youtube-dl
 ln -s ~/dotfiles/picom.conf ~/.config/picom.conf
+ln -s ~/dotfiles/mimeapps.list ~/.config/mimeapps.list
 
 ln -s ~/dotfiles/bin ~/bin
 ln -s ~/dotfiles/.ssh/config ~/.ssh/config
