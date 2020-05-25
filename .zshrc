@@ -12,7 +12,7 @@ bindkey -v
 KEYTIMEOUT=1  # wait 100ms after pressing esc
 
 # record history
-SAVEHIST=100
+SAVEHIST=10000
 HISTFILE=~/.zsh_history
 setopt inc_append_history
 setopt share_history
@@ -27,13 +27,10 @@ PATH=$PATH:~/.local/bin
 
 # configure powerline
 powerline-daemon -q
-. /usr/share/powerline/bindings/zsh/powerline.zsh
+. ~/.local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # get rsa password after login, before starting x
 eval $(keychain --eval --quiet id_rsa)
 
-# to start x at login (only if no other display is running)
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-    # start the window manager
-    exec startx
-fi
+# breakpoint for python
+export PYTHONBREAKPOINT=ipdb.set_trace
