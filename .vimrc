@@ -17,6 +17,7 @@ Plugin 'tpope/vim-unimpaired'           "good shortcuts
 Plugin 'tmhedberg/SimpylFold'           "code folding - functions, classes
 Plugin 'Vimjas/vim-python-pep8-indent'  "proper python indentation
 Plugin 'mechatroner/rainbow_csv'        "for handling csv files
+Plugin 'christoomey/vim-tmux-navigator' "for navigating inside tmux
 "eyecandy
 Plugin 'flazz/vim-colorschemes'         "good collection of color schemes
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
