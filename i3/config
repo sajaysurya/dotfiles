@@ -190,7 +190,7 @@ bindsym $mod+o exec --no-startup-id i3-msg open
 bindsym --release Print exec --no-startup-id maim -s | tee ~/pictures/screenshots/$(date +'%Y-%m-%d_%H:%M:%S:%N').png | xclip -selection clipboard -t image/png
 
 # multi-monitor utils
-bindsym XF86Display exec --no-startup-id xrandr --output HDMI2 --mode 3840x2160 --pos 0x0 --output eDP1 --pos 960x2160 --primary && feh --randomize --bg-scale $wallpaper
+bindsym XF86Display exec --no-startup-id xrandr --output HDMI2 --mode 2560x1440 --pos 0x0 --output eDP1 --pos 320x1440 --primary && feh --randomize --bg-scale $wallpaper
 bindsym $mod+XF86Display exec --no-startup-id xrandr --output HDMI2 --off && feh --randomize --bg-scale $wallpaper
 
 # scaling black magick multi-monitor utils
