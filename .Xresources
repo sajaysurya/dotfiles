@@ -87,3 +87,7 @@ xterm*Translations: #override \
 ! send <c-h> instead of backspace
 XTerm.vt100.backarrowKey: false
 XTerm.ttyModes: erase ^?
+
+! sixel support
+XTerm*decTerminalID: vt340
+XTerm*numColorRegisters: 256
