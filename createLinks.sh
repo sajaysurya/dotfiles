@@ -3,6 +3,7 @@
 # remove unwanted files first
 rm -rf ~/.zshrc
 rm -rf ~/.vimrc
+rm -rf ~/.pdbrc
 rm -rf ~/.xinitrc
 rm -rf ~/.tmux.conf
 rm -rf ~/.Xresources
@@ -26,6 +27,7 @@ rm -rf ~/.ssh/config
 # add symlinks
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.pdbrc ~/.pdbrc
 ln -s ~/dotfiles/.xinitrc ~/.xinitrc
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.Xresources ~/.Xresources

@@ -35,9 +35,6 @@ powerline-daemon -q
 # get rsa password after login, before starting x
 eval $(keychain --eval --quiet id_rsa)
 
-# breakpoint for python
-export PYTHONBREAKPOINT=ipdb.set_trace
-
 # to start x at login (only if no other display is running)
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
     # start the window manager
