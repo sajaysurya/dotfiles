@@ -34,6 +34,3 @@ powerline-daemon -q
 
 # get rsa password after login, before starting x
 eval $(keychain --eval --quiet id_rsa)
-
-# breakpoint for python
-export PYTHONBREAKPOINT=ipdb.set_trace

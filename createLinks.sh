@@ -3,6 +3,7 @@
 # remove unwanted files first
 rm -rf ~/.zshrc
 rm -rf ~/.vimrc
+rm -rf ~/.pdbrc
 rm -rf ~/.tmux.conf
 
 rm -rf ~/.config/ranger
@@ -14,6 +15,7 @@ rm -rf ~/.ssh/config
 # add symlinks
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.pdbrc ~/.pdbrc
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 ln -s ~/dotfiles/ranger ~/.config/ranger
