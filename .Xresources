@@ -85,9 +85,9 @@ xterm*Translations: #override \
                  Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
 
 ! send <c-h> instead of backspace
-XTerm.vt100.backarrowKey: false
-XTerm.ttyModes: erase ^?
+xterm.vt100.backarrowKey: false
+xterm.ttyModes: erase ^?
 
 ! sixel support
-XTerm*decTerminalID: vt340
-XTerm*numColorRegisters: 256
+xterm*decTerminalID: vt340
+xterm*numColorRegisters: 256

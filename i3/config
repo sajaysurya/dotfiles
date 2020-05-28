@@ -182,6 +182,7 @@ for_window [class="Fterm"] floating enable
 for_window [class="Fterm"] resize set 576 768
 for_window [class="Fterm"] move position center
 bindsym XF86Calculator exec --no-startup-id xterm -class Fterm -e ~/dotfiles/bin/python.init.sh
+bindsym $mod+c exec --no-startup-id xterm -class Fterm -e ~/dotfiles/bin/python.init.sh
 bindsym $mod+semicolon exec --no-startup-id xterm -class Fterm -e vim ~/sync/.todo
 bindsym $mod+apostrophe exec --no-startup-id xterm -class Fterm -e vim ~/sync/.scratch
 bindsym $mod+comma exec --no-startup-id xterm -class Fterm -e ranger 

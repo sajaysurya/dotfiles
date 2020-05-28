@@ -50,6 +50,7 @@ let g:SimpylFold_fold_import	= 0
 
 "make slime use tmux
 let g:slime_target = "tmux"
+let g:slime_python_ipython = 1
 
 "ALE error display format
 let g:ale_echo_msg_error_str = 'E'

@@ -5,6 +5,9 @@ import sys
 import numpy as np
 import sympy as sp
 import pandas as pd
+import matplotlib
+import matplotlib.pyplot as plt
+matplotlib.use('module://matplotlib-sixel')
 
 a = np.reshape(np.arange(16), (4, 4))
 b = np.arange(4)
@@ -19,3 +22,4 @@ print("Running Python: ", sys.version[:6])
 print("Loaded Numpy: ", np.version.version, "with a matrix and b vector")
 print("Loaded Sympy: ", sp.__version__, "with x, y symbols")
 print("Loaded Pandas: ", pd.__version__)
+print("Loaded Matplotlib: ", matplotlib.__version__)
