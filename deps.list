@@ -6,6 +6,7 @@ networkmanager
 network-manager-applet
 intel-ucode
 firefox
+firefox-tridactyl-native (AUR)
 i3
 xorg
 xorg-xinit
@@ -58,3 +59,6 @@ fcitx-cloudpinyin
 fcitx-googlepinyin
 fcitx-configtool
 fcitx-im
+tor-browser (AUR)
+libsixel-git (AUR)
+koppa/matplotlib-sixel (github)
