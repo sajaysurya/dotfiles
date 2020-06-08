@@ -1,9 +1,14 @@
 #!/bin/bash
 
 # remove unwanted files first
-rm -f ~/.zshrc
-rm -rf ~/.config/gtk-3.0
-rm -rf ~/.config/i3
+rm -rf ~/.zshrc
+rm -rf ~/.vimrc
+rm -rf ~/.ssh/config
+rm -rf ~/.tmux.conf
+rm -rf ~/.config/rofi
+rm -rf ~/.config/ranger
+rm -rf ~/bin
+rm -rf ~/.config/powerline
 
 # add symlinks
 ln -s ~/dotfiles/.zshrc ~/.zshrc

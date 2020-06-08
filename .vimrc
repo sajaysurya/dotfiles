@@ -27,7 +27,6 @@ filetype plugin indent on    " required
 "basic vim settings
 set nu  "line numbering
 set encoding=utf-8
-set clipboard=unnamedplus
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 colorscheme github
 
