@@ -15,6 +15,7 @@ openssh
 keychain
 git
 rofi
+syncthing
 yay (AUR)
 google-chrome (AUR)
 systemd-boot-pacman-hook (AUR)
