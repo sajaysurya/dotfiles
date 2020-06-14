@@ -1,4 +1,10 @@
 #!/bin/bash
+
+# swaps esc and capslock
+# maps tilde to left shift
+# maps +/- to tilde
+# swaps enter and backslash
+
 hidutil property --set '{
 "UserKeyMapping":[
     {

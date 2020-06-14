@@ -9,6 +9,7 @@ rm -rf ~/.config/rofi
 rm -rf ~/.config/ranger
 rm -rf ~/bin
 rm -rf ~/.config/powerline
+rm -rf ~/.config/skhd
 rm -rf ~/.Xresources
 
 # add symlinks
@@ -20,4 +21,5 @@ ln -s ~/dotfiles/rofi ~/.config/rofi
 ln -s ~/dotfiles/ranger ~/.config/ranger
 ln -s ~/dotfiles/bin ~/bin
 ln -s ~/dotfiles/powerline ~/.config/powerline
+ln -s ~/dotfiles/skhd ~/.config/skhd
 ln -s ~/dotfiles/.Xresources ~/.Xresources
