@@ -10,9 +10,12 @@ sanitise tridactyllocal tridactylsync
 " 
 " Custom Search Engines
 "
-set searchurls.ddg https://duckduckgo.com/?q=
-set searchurls.amz https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=
-set searchurls.dic https://www.vocabulary.com/dictionary/
+set searchurls.!ddg https://duckduckgo.com/?q=
+set searchurls.!amz https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=
+set searchurls.!dic https://www.vocabulary.com/dictionary/
+set searchurls.!you https://www.youtube.com/results?search_query=
+set searchurls.!map https://www.google.com/maps/search/
+set searchurls.!the https://www.thesaurus.com/browse/
 
 "
 " Binds

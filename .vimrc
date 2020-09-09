@@ -9,6 +9,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'           "Package Manager
 Plugin 'tpope/vim-sensible'             "sensible settings
 Plugin 'tpope/vim-fugitive'             "git management
+Plugin 'tpope/vim-rhubarb'              "for getting github links
 Plugin 'Valloric/YouCompleteMe'         "completion
 Plugin 'w0rp/ale'                       "Async Linting Engine
 "useful
