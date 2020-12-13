@@ -20,7 +20,7 @@ Plugin 'Vimjas/vim-python-pep8-indent'  "proper python indentation
 Plugin 'mechatroner/rainbow_csv'        "for handling csv files
 Plugin 'christoomey/vim-tmux-navigator' "for navigating inside tmux
 "eyecandy
-Plugin 'flazz/vim-colorschemes'         "good collection of color schemes
+Plugin 'sonph/onehalf', {'rtp': 'vim/'} "color scheme
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 "misc
 Plugin 'sajaysurya/vimyin'              "for learning mandarin
@@ -32,9 +32,19 @@ filetype plugin indent on    " required
 "basic vim settings
 set nu  "line numbering
 set encoding=utf-8
-set clipboard=unnamedplus
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
-colorscheme github
+
+"clipboard
+set clipboard=unnamedplus
+
+"color schemes
+set t_Co=256
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
+colorscheme onehalfdark
 
 " shortcuts
 nnoremap <silent><Leader>d :YcmCompleter GetDoc<CR>

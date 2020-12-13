@@ -2,7 +2,6 @@
 
 # auto complete menu
 zmodload zsh/complist  # for menuselect
-bindkey -M menuselect '^M' .accept-line  # avoid pressing enter twice
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
