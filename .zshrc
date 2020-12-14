@@ -19,9 +19,12 @@ setopt share_history
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 
+# for vcxsrv clipboard (allow it in windows defender firewall)
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 # aliases for ease
 alias ls="ls --color -lah"
 alias rm="rm -i"
+hash -d home=/mnt/c/Users/Sajay
 
 # add bin folder to path
 PATH=$PATH:~/bin
