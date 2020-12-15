@@ -37,8 +37,9 @@ powerline-daemon -q
 # get rsa password after login, before starting x
 eval $(keychain --eval --quiet id_rsa)
 
-# to start x at login (only if no other display is running)
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-    # start the window manager
-    exec startx
+# to run vim :D
+if [[ $1 == eval ]]
+then
+    "$@ && exit"
+set --
 fi
