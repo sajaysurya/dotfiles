@@ -20,7 +20,7 @@ Plugin 'Vimjas/vim-python-pep8-indent'  "proper python indentation
 Plugin 'mechatroner/rainbow_csv'        "for handling csv files
 Plugin 'christoomey/vim-tmux-navigator' "for navigating inside tmux
 "eyecandy
-Plugin 'sonph/onehalf', {'rtp': 'vim/'} "color scheme
+Plugin 'sajaysurya/onehalf', {'rtp': 'vim/'} "color scheme
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 "misc
 Plugin 'sajaysurya/vimyin'              "for learning mandarin
