@@ -11,6 +11,8 @@ rm -rf ~/.config/powerline
 rm -rf ~/bin
 rm -rf ~/.ssh/config
 
+rm -rf /mnt/c/Users/Sajay/vim.bat
+
 # add symlinks
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
@@ -21,3 +23,5 @@ ln -s ~/dotfiles/powerline ~/.config/powerline
 
 ln -s ~/dotfiles/bin ~/bin
 ln -s ~/dotfiles/.ssh/config ~/.ssh/config
+
+cp ~/dotfiles/vim.bat /mnt/c/Users/Sajay/vim.bat
