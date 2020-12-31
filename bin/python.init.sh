@@ -6,5 +6,6 @@
 # now a days i'm using i3, and the previous comment is irrelevant
 
 ipython3 --TerminalInteractiveShell.editing_mode=vi \
-    --no-confirm-exit \
-    -i ~/dotfiles/python.init.py
+         --TerminalInteractiveShell.colors=linux \
+         --no-confirm-exit \
+         -i ~/dotfiles/python.init.py
