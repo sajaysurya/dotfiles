@@ -5,6 +5,6 @@
 
 # now a days i'm using i3, and the previous comment is irrelevant
 
-ipython --TerminalInteractiveShell.editing_mode=vi \
+ipython3 --TerminalInteractiveShell.editing_mode=vi \
     --no-confirm-exit \
     -i ~/dotfiles/python.init.py

@@ -1,7 +1,4 @@
 import IPython
-# for sixel to work
-import matplotlib
-matplotlib.use('module://sixelplotlib')
 
 # to get colors in the enbedded ipython shell
 alias ii IPython.embed(colors='neutral', editing_mode='vi')

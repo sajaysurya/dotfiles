@@ -7,7 +7,6 @@ import sympy as sp
 import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
-matplotlib.use('module://matplotlib-sixel')
 
 a = np.reshape(np.arange(16), (4, 4))
 b = np.arange(4)
