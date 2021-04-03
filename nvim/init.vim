@@ -23,3 +23,4 @@ if exists('+termguicolors')
     set termguicolors
 endif
 colorscheme onehalfdark
+let g:lightline = {'colorscheme': 'one'}
