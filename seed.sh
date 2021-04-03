@@ -22,7 +22,6 @@ rm -rf ~/.tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.tmux.conf
 ~/.tmux/plugins/tpm/bin/install_plugins
-tmux source ~/.tmux.conf
 
 # setup vim (after installing vim)
 rm -rf ~/.vimrc
