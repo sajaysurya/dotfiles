@@ -16,7 +16,6 @@ set searchurls.!dic https://www.vocabulary.com/dictionary/
 set searchurls.!you https://www.youtube.com/results?search_query=
 set searchurls.!map https://www.google.com/maps/search/
 set searchurls.!the https://www.thesaurus.com/browse/
-set searchurls.！比顺 http://www.strokeorder.info/mandarin.php?q=
 
 "
 " Binds
@@ -24,13 +23,8 @@ set searchurls.！比顺 http://www.strokeorder.info/mandarin.php?q=
 bind it tabduplicate
 
 "
-" GUI changes
-"
-guiset hoverlink none
-
-"
 " Misc settings
 "
 set searchengine google
-set allowautofocus false
 colors dark
+guiset hoverlink right
