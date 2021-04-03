@@ -4,6 +4,6 @@
 # tmux new-session; split-window -v ~/dotfiles/python.init.sh; select-pane -L
 
 ipython3 --TerminalInteractiveShell.editing_mode=vi \
-         --TerminalInteractiveShell.colors=lightbg \
+         --TerminalInteractiveShell.colors=linux \
          --no-confirm-exit \
          -i ~/dotfiles/python.init.py

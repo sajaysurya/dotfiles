@@ -514,7 +514,10 @@ See the header of this file for more information."
 This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
-If you are unsure, try setting them in `dotspacemacs/user-config' first.")
+If you are unsure, try setting them in `dotspacemacs/user-config' first."
+  (custom-set-variables '(spacemacs-theme-custom-colors
+                          '((bg1 . "#282c34"))))
+)
 
 
 (defun dotspacemacs/user-load ()
