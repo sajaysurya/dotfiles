@@ -1,11 +1,9 @@
 #!/bin/bash
 
-# put the following in the custom command pane of dropdown terminal gnome extension config
-# tmux new-session; split-window -h; split-window -v ~/dotfiles/python.init.sh; select-pane -L
-
-# now a days i'm using i3, and the previous comment is irrelevant
+# put the following in the custom command pane of dropdown terminal gnome extension config (or tilda)
+# tmux new-session; split-window -v ~/dotfiles/python.init.sh; select-pane -L
 
 ipython3 --TerminalInteractiveShell.editing_mode=vi \
-         --TerminalInteractiveShell.colors=linux \
+         --TerminalInteractiveShell.colors=lightbg \
          --no-confirm-exit \
          -i ~/dotfiles/python.init.py

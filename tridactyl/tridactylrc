@@ -26,5 +26,5 @@ bind it tabduplicate
 " Misc settings
 "
 set searchengine google
-colors dark
+colors default
 guiset hoverlink right
