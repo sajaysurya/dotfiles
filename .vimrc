@@ -1,11 +1,12 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-sensible'                  "sensible settings
-Plug 'tpope/vim-unimpaired'                "good shortcuts
-Plug 'itchyny/lightline.vim'               "status line
-Plug 'mechatroner/rainbow_csv'             "for handling csv files
-Plug 'christoomey/vim-tmux-navigator'      "for navigating inside tmux
-Plug 'sajaysurya/onehalf', {'rtp': 'vim/'} "color scheme
+Plug 'tpope/vim-sensible'                    "sensible settings
+Plug 'tpope/vim-unimpaired'                  "good shortcuts
+Plug 'tpope/vim-fugitive'                    "for version control
+Plug 'itchyny/lightline.vim'                 "status line
+Plug 'mechatroner/rainbow_csv'               "for handling csv files
+Plug 'christoomey/vim-tmux-navigator'        "for navigating inside tmux
+Plug 'sajaysurya/onehalf', {'rtp': 'vim/'}   "color scheme
 
 call plug#end()
 

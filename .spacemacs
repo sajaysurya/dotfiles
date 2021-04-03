@@ -553,6 +553,7 @@ before packages are loaded."
   (setq-default org-download-image-dir "~/sync/org/backend/images")
   ;; no extra details while inserting screenshot
   (setq org-download-annotate-function (lambda (_link) ""))
+  (setq org-download-image-org-width 700)
   ;; handle long lines
   ;; (add-hook 'org-mode-hook #'spacemacs/toggle-truncate-lines-off)
   (defun org-line-wrap ()
