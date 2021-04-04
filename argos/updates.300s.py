@@ -10,7 +10,7 @@ def main():
     '''
     pac_count = check_output(['checkupdates | wc -l'], shell=True)
     aur_count = check_output(['pikaur -Qua | wc -l'], shell=True)
-    fulltext = "PAC:{} AUR:{}".format(int(pac_count), int(aur_count))
+    fulltext = "ᗧ {} : {} ᗤ".format(int(pac_count), int(aur_count))
     print(fulltext)
 
 if __name__ == "__main__":

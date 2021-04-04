@@ -10,7 +10,7 @@ def main():
     c-style main code
     '''
     load = re.split('[:,\n]', check_output("w | grep -m 1 'load average'", shell=True).decode())[-4:][:3]
-    fulltext = "<span font='FontAwesome'>\uf085</span> {} {} {}".format(load[0], load[1], load[2])
+    fulltext = f"<span font='FontAwesome'>\uf085</span>  {float(load[0])/4:0.2f} {float(load[1])/4:0.2f} {float(load[2])/4:0.2f}"
     print(fulltext)
 
 if __name__ == "__main__":
