@@ -68,3 +68,7 @@ ln -s ~/dotfiles/tridactyl ~/.config/tridactyl
 # collertion of binaries
 rm -rf ~/bin
 ln -s ~/dotfiles/bin ~/bin
+
+# tridactyl configuration
+rm -rf ~/.config/argos
+ln -s ~/dotfiles/argos ~/.config/argos
