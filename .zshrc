@@ -2,7 +2,6 @@
 
 # auto complete menu
 zmodload zsh/complist  # for menuselect
-bindkey -M menuselect '^M' .accept-line  # avoid pressing enter twice
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
@@ -27,10 +26,6 @@ alias rm="rm -i"
 # add bin folder to path
 PATH=$PATH:~/bin
 PATH=$PATH:~/.local/bin
-
-# configure powerline
-powerline-daemon -q
-. ~/.local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # get rsa password after login, before starting x
 eval $(keychain --eval --quiet id_rsa)
