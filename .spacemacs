@@ -42,7 +42,7 @@ This function should only modify configuration layer settings."
      ;; better-defaults
      emacs-lisp
      ;; git
-     helm
+     ivy
      ;; lsp
      ;; markdown
      multiple-cursors
@@ -539,15 +539,15 @@ before packages are loaded."
   ;; org config
   (setq org-startup-folded t)
   (setq org-agenda-start-day "-7d")
-  (setq org-agenda-span 20)
+  (setq org-agenda-span 15)
   (setq org-default-notes-file "~/sync/org/scratch.org")
   (setq org-capture-templates
         '(("t" "Todo" entry (file+headline "~/sync/org/scratch.org" "Tasks")
            "* TODO %?\n SCHEDULED: %t")
           ("l" "Log" entry (file+headline "~/sync/org/scratch.org" "Logs")
            "* %U %?")))
-  (setq org-todo-keywords
-        '((sequence "TODO" "DO.." "|" "DONE" "NOPE")))
+  ;(setq org-todo-keywords
+        ;'((sequence "TODO" "DO.." "|" "DONE" "NOPE")))
   (setq org-agenda-files (list "~/sync/org/projects"
                                "~/sync/org/scratch.org"
                                "~/sync/org/shopping.org"))
