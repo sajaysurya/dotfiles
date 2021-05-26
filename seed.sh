@@ -45,6 +45,10 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ~/bin/nvim.appimage --appimage-extract-and-run +PlugInstall +qall
 
+# collertion of binaries
+rm -rf ~/bin
+ln -s ~/dotfiles/bin ~/bin
+
 # list of ssh connections
 rm -rf ~/.ssh/config
 ln -s ~/dotfiles/.ssh/config ~/.ssh/config
@@ -53,22 +57,20 @@ ln -s ~/dotfiles/.ssh/config ~/.ssh/config
 rm -rf ~/.pdbrc
 ln -s ~/dotfiles/.pdbrc ~/.pdbrc
 
-# setup spacemacs
-rm -rf ~/.spacemacs
-ln -s ~/dotfiles/.spacemacs  ~/.spacemacs
+if [[ $* == *--gui* ]]; then
+    # setup spacemacs
+    rm -rf ~/.spacemacs
+    ln -s ~/dotfiles/.spacemacs  ~/.spacemacs
 
-# mpv configuration
-rm -rf ~/.config/mpv
-ln -s ~/dotfiles/mpv ~/.config/mpv
+    # mpv configuration
+    rm -rf ~/.config/mpv
+    ln -s ~/dotfiles/mpv ~/.config/mpv
 
-# tridactyl configuration
-rm -rf ~/.config/tridactyl
-ln -s ~/dotfiles/tridactyl ~/.config/tridactyl
+    # tridactyl configuration
+    rm -rf ~/.config/tridactyl
+    ln -s ~/dotfiles/tridactyl ~/.config/tridactyl
 
-# collertion of binaries
-rm -rf ~/bin
-ln -s ~/dotfiles/bin ~/bin
-
-# tridactyl configuration
-rm -rf ~/.config/argos
-ln -s ~/dotfiles/argos ~/.config/argos
+    # tridactyl configuration
+    rm -rf ~/.config/argos
+    ln -s ~/dotfiles/argos ~/.config/argos
+fi
