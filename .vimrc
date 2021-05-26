@@ -30,7 +30,18 @@ if exists('+termguicolors')
     set termguicolors
 endif
 silent! colorscheme onehalfdark
-let g:lightline = {'colorscheme': 'one'}
+
+"lightline settings
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
 
 "set spell-check
 autocmd BufRead,BufNewFile *.md setlocal spell
