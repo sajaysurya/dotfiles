@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'wincent/vim-clipper'                   "clipboard
 Plug 'tpope/vim-sensible'                    "sensible settings
 Plug 'tpope/vim-unimpaired'                  "good shortcuts
 Plug 'tpope/vim-fugitive'                    "for version control
@@ -19,7 +20,6 @@ call plug#end()
 "basic vim settings
 set nu  "line numbering
 set encoding=utf-8
-set clipboard=unnamedplus
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 "color schemes
@@ -49,3 +49,10 @@ let g:slime_python_ipython = 1
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+if &term =~ '^tmux'
+    let &t_BE="\<Esc>[?2004h"
+    let &t_BD="\<Esc>[?2004l"
+    let &t_PS="\<Esc>[200~"
+    let &t_PE="\<Esc>[201~"
+endif

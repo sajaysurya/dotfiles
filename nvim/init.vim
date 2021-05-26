@@ -1,5 +1,6 @@
 call plug#begin(stdpath('data') . '/plugged')
 
+Plug 'wincent/vim-clipper'                   "clipboard
 Plug 'tpope/vim-sensible'                    "sensible settings
 Plug 'tpope/vim-unimpaired'                  "good shortcuts
 Plug 'tpope/vim-fugitive'                    "for version control
@@ -13,7 +14,6 @@ call plug#end()
 "basic vim settings
 set nu  "line numbering
 set encoding=utf-8
-set clipboard=unnamedplus
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 "color schemes

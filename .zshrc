@@ -106,7 +106,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias nv="~/bin/nvim.appimage --appimage-extract-and-run"
+alias nvim="~/bin/nvim.appimage --appimage-extract-and-run"
+# Pipe anything into `clip` to forward it to Clipper
+alias clip="nc -N localhost 8377"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
