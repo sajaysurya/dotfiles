@@ -19,7 +19,7 @@ def activate_environment(name, loc):
     if fname.exists():
         command = 'source ' + str(fname / Path('bin') / Path('activate'))
         com1 = Popen(['echo', command], stdout=PIPE)
-        com2 = Popen(['xsel', '-bi'], stdin=com1.stdout, stdout=PIPE)
+        com2 = Popen(['nc',  '-N', 'localhost', '8377'], stdin=com1.stdout, stdout=PIPE)
         print('necessary command copied to clipboard')
     else:
         print('the said environment does not exist')
