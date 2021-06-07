@@ -5,6 +5,7 @@ Plug 'tpope/vim-sensible'                    "sensible settings
 Plug 'tpope/vim-unimpaired'                  "good shortcuts
 Plug 'tpope/vim-fugitive'                    "for version control
 Plug 'itchyny/lightline.vim'                 "status line
+Plug 'neovim/nvim-lspconfig'                 " LSP for neovim
 Plug 'mechatroner/rainbow_csv'               "for handling csv files
 Plug 'christoomey/vim-tmux-navigator'        "for navigating inside tmux
 Plug 'sajaysurya/onehalf', {'rtp': 'vim/'}   "color scheme
@@ -25,3 +26,7 @@ if exists('+termguicolors')
 endif
 silent! colorscheme onehalfdark
 let g:lightline = {'colorscheme': 'one'}
+
+lua << EOF
+require'lspconfig'.pyright.setup{}
+EOF
