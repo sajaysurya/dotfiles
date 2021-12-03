@@ -23,54 +23,19 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.tmux.conf
 ~/.tmux/plugins/tpm/bin/install_plugins
 
-# setup vim (after installing vim)
-rm -rf ~/.vimrc
-ln -s ~/dotfiles/.vimrc ~/.vimrc
-# setup vim plugins
-rm -rf ~/.vim
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim +PlugInstall +qall
-
-# install neovim
-rm -rf ~/bin/nvim.appimage
-wget -O ~/bin/nvim.appimage https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
-chmod +x ~/bin/nvim.appimage
-# setup neovim
+# setup neovim (after installing neovim)
 rm -rf ~/.config/nvim
 ln -s ~/dotfiles/nvim ~/.config/nvim
 # setup neovim plugins
 rm -rf ~/.local/share/nvim/plugged
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-~/bin/nvim.appimage --appimage-extract-and-run +PlugInstall +qall
+nvim +PlugInstall +qall
 
-# collertion of binaries
+# collection of binaries
 rm -rf ~/bin
 ln -s ~/dotfiles/bin ~/bin
 
 # list of ssh connections
 rm -rf ~/.ssh/config
 ln -s ~/dotfiles/.ssh/config ~/.ssh/config
-
-# setup python debugger
-rm -rf ~/.pdbrc
-ln -s ~/dotfiles/.pdbrc ~/.pdbrc
-
-if [[ $* == *--gui* ]]; then
-    # setup spacemacs
-    rm -rf ~/.spacemacs
-    ln -s ~/dotfiles/.spacemacs  ~/.spacemacs
-
-    # mpv configuration
-    rm -rf ~/.config/mpv
-    ln -s ~/dotfiles/mpv ~/.config/mpv
-
-    # tridactyl configuration
-    rm -rf ~/.config/tridactyl
-    ln -s ~/dotfiles/tridactyl ~/.config/tridactyl
-
-    # tridactyl configuration
-    rm -rf ~/.config/argos
-    ln -s ~/dotfiles/argos ~/.config/argos
-fi

@@ -9,7 +9,7 @@ fi
 export PATH=$HOME/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/sajay/.oh-my-zsh"
+export ZSH="/Users/sajay/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -106,7 +106,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias nvim="~/bin/nvim.appimage --appimage-extract-and-run"
 # Pipe anything into `clip` to forward it to Clipper
 alias clip="nc -N localhost 8377"
 

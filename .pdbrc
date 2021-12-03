@@ -1,4 +1,0 @@
-import IPython
-
-# to get colors in the enbedded ipython shell
-alias ii IPython.embed(colors='linux', editing_mode='vi')
